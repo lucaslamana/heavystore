@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>Heavy store</title>
+    <link href="padrao.css" rel="stylesheet" type="text/css">
+  </head>
+  <body bgcolor="#000">
+    
+    <div id="menu-topo"><ul id="menu-lista">
+        <li><a href="#">Hist&oacute;ria</a></li>
+        <li><a href="#">Produtos</a>
+          <ul><li><a href="#">Discos</a></li>
+            <li><a href="#">Camisetas</a></li>
+            <li><a href="#">Outros</a></li></ul>
+        </li>
+        <li><a href="#">Cadastre-se</a></li>
+        <li><a href="#">N&oacute;s</a>
+          <ul><li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li></ul>
+        </li>
+      </ul>
+
+      <div id="menu-busca">
+        <form method="post" style="margin: 0px">
+          <table>
+            <tr>
+              <td><input type="text" style="width: 150px; padding: 0px; border-radius: 8px" name="procurar" value="Procurar"></td>
+              <td><input type="image" src="images/search.png" style="width: 18px; height: 18px; border-radius: 8px;" onclick="return alertar();" alt="Submit"></td>
+            </tr>
+          </table>  
+        </form>
+      </div>
+    </div>
+    
+    <div id="cabecalho">
+      <div id="cabecalho-login" align="right">
+        <form method="post">
+          <table id="texto">
+            <tr>
+              <td align="right">Usu&aacute;rio</td>
+              <td><input type="text" style="width: 150px; border-radius: 8px;" name="usuario"></td>
+            </tr>
+            <tr>
+              <td align="right">Senha</td>
+              <td><input type="password" style="width: 150px; border-radius: 8px;" name="senha"></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="right"><input type="submit" value="Log in" style="color: #000; font-family: Calibri; font-size: 14px; background-color: #fff; border-radius: 8px;"></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+    
+    <div id="conteudo"> </div>
+    
+    <div id="rodape"> </div>
+    
+  </body>
+</html>
