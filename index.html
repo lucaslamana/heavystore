@@ -7,16 +7,10 @@
     
     <div id="menu-topo"><ul id="menu-lista">
         <li><a href="#">Hist&oacute;ria</a></li>
-        <li><a href="#">Produtos</a>
-          <ul><li><a href="#">Discos</a></li>
-            <li><a href="#">Camisetas</a></li>
-            <li><a href="#">Outros</a></li></ul>
-        </li>
-        <li><a href="#">Cadastre-se</a></li>
-        <li><a href="#">N&oacute;s</a>
-          <ul><li><a href="#">Sobre</a></li>
-            <li><a href="#">Contato</a></li></ul>
-        </li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="cadastro.php">Cadastre-se</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="contato.php">Contato</a></li>
       </ul>
 
       <div id="menu-busca">
@@ -24,7 +18,7 @@
           <table>
             <tr>
               <td><input type="text" style="width: 150px; padding: 0px; border-radius: 8px" name="procurar" value="Procurar"></td>
-              <td><input type="image" src="images/search.png" style="width: 18px; height: 18px; border-radius: 8px;" onclick="return alertar();" alt="Submit"></td>
+              <td><input type="image" src="images/search.png" style="width: 18px; height: 18px; border-radius: 8px;" onclick="" alt="Submit"></td>
             </tr>
           </table>  
         </form>
@@ -32,6 +26,9 @@
     </div>
     
     <div id="cabecalho">
+      <div id="cabecalho-logo">
+        <img src="images/logo.jpg"/>
+      </div>
       <div id="cabecalho-login" align="right">
         <form method="post">
           <table id="texto">
@@ -44,7 +41,7 @@
               <td><input type="password" style="width: 150px; border-radius: 8px;" name="senha"></td>
             </tr>
             <tr>
-              <td colspan="2" align="right"><input type="submit" value="Log in" style="color: #000; font-family: Calibri; font-size: 14px; background-color: #fff; border-radius: 8px;"></td>
+              <td colspan="2" align="right"><input type="submit" value="Log in" id="botao"></td>
             </tr>
           </table>
         </form>
