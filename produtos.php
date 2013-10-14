@@ -1,9 +1,10 @@
+<?php ?>
+
 <html>
   <head>
-    <title>Contato</title>
-    <link href="padrao.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="padrao.css" type="text/css"/>
+    <title>Home</title>
   </head>
-
   <body bgcolor="#000">
 
     <div id="menu-topo"><ul id="menu-lista">
@@ -27,35 +28,36 @@
     </div>
     <div id="cabecalho">
       <div id="cabecalho-logo">
-        <a href="index.html"><img src="images\logo.jpg"></a>
+        <a href="index.html"><img src="images/logo.jpg"/></a>
       </div>
     </div>
-    <div id="conteudo">
 
-      <form>
-        <table id="texto" align="center">
+    <div id="conteudo">
+      <div id="conteudo-esquerdo">
+        <table id="texto">
           <tr>
-            <td align="right">Nome</td>
-            <td><input type="text" id="campo" style="width: 200px;">
+            <td style="font-weight: bold;">Categorias</td>
           </tr>
           <tr>
-            <td align="right">E-mail</td>
-            <td><input type="text" id="campo" style="width: 200px;">
+            <td>Discos</td>
           </tr>
           <tr>
-            <td align="right">Assunto</td>
-            <td><input type="text" id="campo" style="width: 200px;">
+            <td>Camisetas</td>
           </tr>
           <tr>
-            <td align="right">Mensagem</td>
-            <td><textarea rows="10" cols="30" style="border-radius: 8px; outline: 0;"></textarea>
-          </tr>
-          <tr>
-            <td colspan="2" align="center"><input type="submit" value="Enviar" id="botao">
-              <input type="reset" value="Limpar" id="botao"></td>
+            <td>Outros</td>
           </tr>
         </table>
-      </form>
+      </div>
+      <div id="conteudo-centro">
+        <div id="conteudo-box"></div>
+        <div id="conteudo-box"></div>
+        <div id="conteudo-box"></div>
+        <div id="conteudo-box"></div>
+        <div id="conteudo-box"></div>
+        <div id="conteudo-box"></div>
+      </div>
     </div>
-  </body>
 
+  </body>
+</html>

@@ -7,7 +7,7 @@
     
     <div id="menu-topo"><ul id="menu-lista">
         <li><a href="#">Hist&oacute;ria</a></li>
-        <li><a href="#">Produtos</a></li>
+        <li><a href="produtos.php">Produtos</a></li>
         <li><a href="cadastro.php">Cadastre-se</a></li>
         <li><a href="#">Sobre</a></li>
         <li><a href="contato.php">Contato</a></li>
@@ -17,7 +17,7 @@
         <form method="post" style="margin: 0px">
           <table>
             <tr>
-              <td><input type="text" style="width: 150px; padding: 0px; border-radius: 8px" name="procurar" value="Procurar"></td>
+              <td><input type="text" id="campo" style="width: 200px;" name="procurar"></td>
               <td><input type="image" src="images/search.png" style="width: 18px; height: 18px; border-radius: 8px;" onclick="" alt="Submit"></td>
             </tr>
           </table>  
@@ -34,11 +34,11 @@
           <table id="texto">
             <tr>
               <td align="right">Usu&aacute;rio</td>
-              <td><input type="text" style="width: 150px; border-radius: 8px;" name="usuario"></td>
+              <td><input type="text"  id="campo" style="width: 150px;" name="usuario"></td>
             </tr>
             <tr>
               <td align="right">Senha</td>
-              <td><input type="password" style="width: 150px; border-radius: 8px;" name="senha"></td>
+              <td><input type="password" id="campo" style="width: 150px;" name="senha"></td>
             </tr>
             <tr>
               <td colspan="2" align="right"><input type="submit" value="Log in" id="botao"></td>
