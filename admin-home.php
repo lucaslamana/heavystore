@@ -1,3 +1,5 @@
+<?php include("verificacao.php"); ?>
+
 <html>
   <head>
     <link rel="stylesheet" href="padrao.css" type="text/css">
@@ -6,8 +8,17 @@
     <div id="cabecalho">
       <div id="cabecalho-logo">
         <a href="admin-home.php"><img src="images/logo.jpg"></a>
-        <div id="cabecalho-login"></div>
       </div>
+        <div id="cabecalho-login" align="right">
+          <table id="texto">
+            <tr>
+              <td> <?php echo "Ola ".$_SESSION["nome"] ?> </td>
+            </tr>
+            <tr>
+              <td align="right"><input type="button" id="botao" onclick="" value="Sair"></td>
+            </tr>
+          </table>
+        </div>
       
     </div>
       <div id="menu-topo">
@@ -15,15 +26,6 @@
           <li><a href="admin-produtos.php">Produtos</a></li>
           <li><a href="admin-usuarios.php">Usu&aacute;rios</a></li>
         </ul>
-      </div>
-    
-    <div id="conteudo">
-      
-    </div>
-    
-    <div id="rodape">
-      
-    </div>
-    
+      </div>    
   </body>
 </html>

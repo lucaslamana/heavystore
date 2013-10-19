@@ -1,3 +1,5 @@
+<?php include("verificacao.php"); ?>
+
 <html>
   <head>
     <link rel="stylesheet" href="padrao.css" type="text/css">

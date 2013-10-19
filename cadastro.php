@@ -18,7 +18,7 @@
         <form method="post" style="margin: 0px">
           <table>
             <tr>
-              <td><input type="text" id="campo" style="width: 200px;" name="procurar"></td>
+              <td><input type="text" id="campo-curto" name="procurar"></td>
               <td><input type="image" src="images/search.png" style="width: 18px; height: 18px; border-radius: 8px;" onclick="return alertar();" alt="Submit"></td>
             </tr>
           </table>  
@@ -32,43 +32,42 @@
     </div>
 
     <div id="conteudo">
-      <table align="center" id="texto">
+      <table id="texto" cellspacing="5">
         <tr>
-          <td colspan="2" align="center">Precisamos de algumas informa&ccedil;&otilde;es para realizar seu cadastro</td>
+          <td id="texto-titulo">Meu Cadastro</td>
         </tr>
         <tr>
-          <td align="right">Nome</td>
-          <td><input type="text" id="campo" style="width: 200px;" name="nome"></td>
+          <td>Nome</td>
+          <td><input type="text" id="campo-longo" name="nome"></td>
         </tr>
         <tr>
-          <td align="right">E-mail</td>
-          <td><input type="text" id="campo" style="width: 200px;" name="nome"></td>
+          <td>E-mail</td>
+          <td><input type="text" id="campo-longo" name="nome"></td>
         </tr>
         <tr>
-          <td align="right">Sexo</td>
+          <td>Sexo</td>
           <td><input type="radio" name="feminino" value="F">Feminino<br>
             <input type="radio" name="masculino" value="M">Masculino</td>
         </tr>
         <tr>
-          <td align="right">Nascimento</td>
-          <td><input type="date" name="nascimento" id="campo"></td>
+          <td>Nascimento</td>
+          <td><input type="date" name="nascimento" id="campo-curto"></td>
         </tr>
         <tr>
-          <td align="right">Usuario</td>
-          <td><input type="text" id="campo" style="width: 150px" name="nome"></td>
+          <td>Usuario</td>
+          <td><input type="text" id="campo-curto" name="nome"></td>
         </tr>
         <tr>
-          <td align="right">Senha</td>
-          <td><input type="password" id="campo" style="width: 150px;" name="nome"></td>
+          <td>Senha</td>
+          <td><input type="password" id="campo-curto" name="nome"></td>
         </tr>
         <tr>
-          <td align="right">Confirmar senha</td>
-          <td><input type="password" id="campo" style="width: 150px;" name="nome"></td>
+          <td>Confirmar senha</td>
+          <td><input type="password" id="campo-curto" name="nome"></td>
         </tr>
         <tr>
           <td colspan="2" align="center">
-            <input type="submit" value="Enviar" id="botao">
-            <input type="reset" value="Limpar" id="botao">
+            <input type="submit" value="Enviar" id="botao" >
           </td>
         </tr>
       </table>

@@ -18,7 +18,7 @@
         <form method="post" style="margin: 0px">
           <table>
             <tr>
-              <td><input type="text" id="campo" style="width: 200px;" name="procurar"></td>
+              <td><input type="text" id="campo-longo-longo" style="width: 200px;" name="procurar"></td>
               <td><input type="image" src="images/search.png" style="width: 18px; height: 18px; border-radius: 8px;" onclick="return alertar();" alt="Submit"></td>
             </tr>
           </table>  
@@ -36,19 +36,19 @@
         <table id="texto" align="center">
           <tr>
             <td align="right">Nome</td>
-            <td><input type="text" id="campo" style="width: 200px;">
+            <td><input type="text" id="campo-longo">
           </tr>
           <tr>
             <td align="right">E-mail</td>
-            <td><input type="text" id="campo" style="width: 200px;">
+            <td><input type="text" id="campo-longo">
           </tr>
           <tr>
             <td align="right">Assunto</td>
-            <td><input type="text" id="campo" style="width: 200px;">
+            <td><input type="text" id="campo-longo">
           </tr>
           <tr>
             <td align="right">Mensagem</td>
-            <td><textarea rows="10" cols="30" style="border-radius: 8px; outline: 0;"></textarea>
+            <td><textarea rows="5" cols="29" style="border-radius: 8px; outline: 0;"></textarea>
           </tr>
           <tr>
             <td colspan="2" align="center"><input type="submit" value="Enviar" id="botao">
