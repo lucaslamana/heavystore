@@ -20,7 +20,7 @@
     
     <div id="cabecalho">
       <div id="cabecalho-logo">
-        <a href="index.html"><img src="images/logo.jpg"/></a>
+        <a href="index.php"><img src="images/logo.jpg"/></a>
       </div>
       <div id="cabecalho-login" align="right">
         <form method="post" action="validacao-admin.php" name="formulario">

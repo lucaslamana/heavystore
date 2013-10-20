@@ -17,7 +17,7 @@
         <form method="post" style="margin: 0px">
           <table>
             <tr>
-              <td><input type="text" id="campo" style="width: 200px;" name="procurar"></td>
+              <td><input type="text" id="campo-curto" style="width: 200px;" name="procurar"></td>
               <td><input type="image" src="images/search.png" style="width: 18px; height: 18px; border-radius: 8px;" onclick="" alt="Submit"></td>
             </tr>
           </table>  
@@ -29,16 +29,17 @@
       <div id="cabecalho-logo">
         <img src="images/logo.jpg"/>
       </div>
+      
       <div id="cabecalho-login" align="right">
-        <form method="post">
+        <form method="post" action="validacao-usuario.php">
           <table id="texto">
             <tr>
               <td align="right">Usu&aacute;rio</td>
-              <td><input type="text"  id="campo" style="width: 150px;" name="usuario"></td>
+              <td><input type="text"  id="campo-curto" style="width: 150px;" name="usuario"></td>
             </tr>
             <tr>
               <td align="right">Senha</td>
-              <td><input type="password" id="campo" style="width: 150px;" name="senha"></td>
+              <td><input type="password" id="campo-curto" style="width: 150px;" name="senha"></td>
             </tr>
             <tr>
               <td colspan="2" align="right"><input type="submit" value="Log in" id="botao"></td>

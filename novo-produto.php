@@ -30,9 +30,9 @@
             <td>
               <select id="campo-curto" name="escolha">
                 <option value="cd">CD</option>
-                <option value="dvd">Op2</option>
-                <option value="camiseta">Op3</option>
-                <option value="bandeira">Op4</option>
+                <option value="dvd">DVD</option>
+                <option value="camiseta">Camiseta</option>
+                <option value="bandeira">Bandeira</option>
               </select>
             </td>
           </tr>
@@ -41,7 +41,7 @@
           </tr>
         </table>
       </form>
-      <form method="post" action="#">
+      <form method="post" action="insere-produto.php">
         <table id="texto" cellspacing="3">
           <?php if (@$_GET["escolha"] == "cd") { ?>
             <tr>
@@ -76,15 +76,101 @@
             </tr>
           <?php } else if (@$_GET["escolha"] == "dvd") { ?>
             <tr>
-              <td>DVD</td>
+              <td id="texto-titulo" colspan="2">DVD</td>
+            </tr>
+            <tr>
+              <td>Nome</td>
+              <td><input type="text" id="campo-longo" name="nome"></td>
+            </tr>
+            <tr>
+              <td>Descri&ccedil;&atilde;o</td>
+              <td><textarea rows="5" cols="29" style="border-radius: 8px; outline: 0;"></textarea></td>
+            </tr>
+            <tr>
+              <td>Valor</td>
+              <td><input type="text" id="campo-mais-curto" name="valor">
+            </tr>
+            <tr>
+              <td>Dura&ccedil;&atilde;o</td>
+              <td><input type="text" id="campo-mais-curto" name="duracao">
+            </tr>
+            <tr>
+              <td>Quantidade</td>
+              <td><input type="number" id="campo-mais-curto" name="quantidade">
+            </tr>
+            <tr>
+              <td>Faixas</td>
+              <td><textarea rows="8" cols="29" style="border-radius: 8px; outline: 0;"></textarea></td>
+            </tr>
+            <tr>
+              <td><input type="submit" value="Cadastrar" id="botao"></td>
             </tr>
           <?php } else if (@$_GET["escolha"] == "camiseta") { ?>
             <tr>
-              <td>Camiseta</td>
+              <td id="texto-titulo" colspan="2">Camiseta</td>
+            </tr>
+            <tr>
+              <td>Nome</td>
+              <td><input type="text" id="campo-longo" name="nome"></td>
+            </tr>
+            <tr>
+              <td>Descri&ccedil;&atilde;o</td>
+              <td><textarea rows="5" cols="29" style="border-radius: 8px; outline: 0;"></textarea></td>
+            </tr>
+            <tr>
+              <td>Material</td>
+              <td><input type="text" id="campo-longo" name="nome"></td>              
+            </tr>
+            <tr>
+              <td>Cor</td>
+              <td><input type="text" id="campo-mais-curto" name="cor">
+            </tr>
+            <tr>
+              <td>Tamanho</td>
+              <td><input type="radio" name="tamanho" value="PP">PP <input type="radio" name="tamanho" value="P">P <input type="radio" name="tamanho" value="M">M
+                <input type="radio" name="tamanho" value="PP">G <input type="radio" name="tamanho" value="P">GG <input type="radio" name="tamanho" value="M">GG</td>
+            </tr>
+            <tr>
+              <td>Valor</td>
+              <td><input type="text" id="campo-mais-curto" name="valor">
+            </tr>
+            <tr>
+              <td>Quantidade</td>
+              <td><input type="number" id="campo-mais-curto" name="quantidade">
+            </tr>
+            <tr>
+              <td><input type="submit" value="Cadastrar" id="botao"></td>
             </tr>
           <?php } else if (@$_GET["escolha"] == "bandeira") { ?>
             <tr>
-              <td>Bandeira</td>
+              <td id="texto-titulo" colspan="2">Bandeira</td>
+            </tr>
+            <tr>
+              <td>Nome</td>
+              <td><input type="text" id="campo-longo" name="nome"></td>
+            </tr>
+            <tr>
+              <td>Descri&ccedil;&atilde;o</td>
+              <td><textarea rows="5" cols="29" style="border-radius: 8px; outline: 0;"></textarea></td>
+            </tr>
+            <tr>
+              <td>Material</td>
+              <td><input type="text" id="campo-longo" name="nome"></td>              
+            </tr>
+            <tr>
+              <td>Cor</td>
+              <td><input type="text" id="campo-mais-curto" name="cor">
+            </tr>
+            <tr>
+              <td>Valor</td>
+              <td><input type="text" id="campo-mais-curto" name="valor">
+            </tr>
+            <tr>
+              <td>Quantidade</td>
+              <td><input type="number" id="campo-mais-curto" name="quantidade">
+            </tr>
+            <tr>
+              <td><input type="submit" value="Cadastrar" id="botao"></td>
             </tr>
           <?php } ?>
         </table>
