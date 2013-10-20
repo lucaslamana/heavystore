@@ -1,6 +1,9 @@
 <?php
-include("verificacao.php");
 include("conexao.php");
+include("verificacao.php");
+if($_SESSION["usuario"]!="admin"){
+  header("location: admin.php");
+}
 ?>
 
 <html>
