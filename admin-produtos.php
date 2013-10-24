@@ -66,7 +66,8 @@ if ($_SESSION["usuario"] != "admin") {
           <td align="center">
             <a href="#"><img src="images/edit.png" width="16" height="16" border="0"></a>
             <a href="#"><img src="images/view.png" width="16" height="16" border="0"></a>
-            <a href="excluir-produto.php?id=<?php echo $procura["id"]; ?>"><img src="images/delete.png" width="16" height="16" border="0"></a></td>
+            <a href="excluir-produto.php?id=<?php echo $procura["id"]; ?>"><img src="images/delete.png" width="16" height="16" border="0"></a>
+            <a href="incluir-foto.php?nome=<?php echo $procura["nome"]?>&id=<?php echo $procura["id"]?>"><img src="images/foto.png" width="20" height="20" border="0"></td>
         </tr>
 <?php } ?>
     </table>

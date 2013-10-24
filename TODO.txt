@@ -1,0 +1,10 @@
+TODO
+
+[] LL Upload de fotos para os produtos
+[] LB Página de detalhe dos produtos
+[]    Página de cadastro de endereço
+[]    Página de Sobre
+[]    Página de história
+[]    Página principal do usuário
+[]    Listagem dos produtos cadastrados na página de produtos
+  
