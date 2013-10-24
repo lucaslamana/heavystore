@@ -1,10 +1,15 @@
 TODO
 
-[] LL Upload de fotos para os produtos
-[] LB Página de detalhe dos produtos
-[]    Página de cadastro de endereço
-[]    Página de Sobre
-[]    Página de história
-[]    Página principal do usuário
-[]    Listagem dos produtos cadastrados na página de produtos
+[X] LL Upload de fotos para os produtos
+[x] LB Listagem de produtos na pagina de produtos
+[]  LB Página de detalhe dos produtos
+[]  LL Página de cadastro de endereço
+[]     Página de Sobre
+[]  LB Página de história
+[]  LL Página principal do usuário
+[]  LB População banco de dados
+[]  LB Ajustar tamanho Imagens
+
+
+Filtragem de produtos
   

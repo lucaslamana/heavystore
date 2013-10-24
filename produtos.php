@@ -53,7 +53,7 @@
       <div id="conteudo-centro">
 
         <?php
-        $txt = "select * from produtos";
+        $txt = "select * from produtos join fotos on fotos.produtosid = produtos.id";
         $sql = mysql_query($txt);
 
         while ($dados = mysql_fetch_array($sql)) {
@@ -61,8 +61,9 @@
           <div id="conteudo-box">
             <?php echo $dados["nome"]; ?>
             <br>
-            <?php echo $dados["descricao"];
-          ?>
+            <?php echo $dados["descricao"]; ?>
+            <br><br>
+            <center><img src = "images/produtos/<?php echo $dados["foto"];?> " height="150dx"></center>
 
         </div>
         <?php } ?>
