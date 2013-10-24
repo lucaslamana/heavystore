@@ -1,11 +1,12 @@
 <?php ?>
-
 <html>
   <head>
     <link rel="stylesheet" href="padrao.css" type="text/css"/>
     <title>Home</title>
   </head>
   <body bgcolor="#000">
+
+    <?php include ("conexao.php"); ?>
 
     <div id="menu-topo"><ul id="menu-lista">
         <li><a href="#">Hist&oacute;ria</a></li>
@@ -50,12 +51,21 @@
         </table>
       </div>
       <div id="conteudo-centro">
-        <div id="conteudo-box"></div>
-        <div id="conteudo-box"></div>
-        <div id="conteudo-box"></div>
-        <div id="conteudo-box"></div>
-        <div id="conteudo-box"></div>
-        <div id="conteudo-box"></div>
+
+        <?php
+        $txt = "select * from produtos";
+        $sql = mysql_query($txt);
+
+        while ($dados = mysql_fetch_array($sql)) {
+          ?>
+          <div id="conteudo-box">
+            <?php echo $dados["nome"]; ?>
+            <br>
+            <?php echo $dados["descricao"];
+          ?>
+
+        </div>
+        <?php } ?>
       </div>
     </div>
 
