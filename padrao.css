@@ -18,6 +18,10 @@
   text-decoration: none;
 }
 
+#no-link:hover{
+  font-weight: bold;
+}
+
 #texto-erro{
   font-family: Calibri;
   font-size: 20px;
@@ -222,6 +226,17 @@
 }
 
 #campo-longo:focus{
+  box-shadow: red 0.2em 0.2em 0.1em;
+  outline: 0;
+}
+
+#campo-texto{
+  border-radius: 8px;
+  font-family: Calibri;
+  font-size: 14px;
+}
+
+#campo-texto:focus{
   box-shadow: red 0.2em 0.2em 0.1em;
   outline: 0;
 }

@@ -17,10 +17,10 @@ if($_SESSION["usuario"]!="admin"){
         <div id="cabecalho-login" align="right">
           <table id="texto">
             <tr>
-              <td> <?php echo "Ola ".$_SESSION["nome"] ?> </td>
+              <td  align="right"> <?php echo "Ola ".$_SESSION["nome"] ?> </td>
             </tr>
             <tr>
-              <td align="right"><input type="button" id="botao" onclick="" value="Sair"></td>
+              <td><a href="sair.php" id="no-link">Clique aqui </a> para sair</td>
             </tr>
           </table>
         </div>

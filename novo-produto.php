@@ -1,6 +1,6 @@
 <?php
 include("verificacao.php");
-if($_SESSION["usuario"]!="admin"){
+if ($_SESSION["usuario"] != "admin") {
   header("location: admin.php");
 }
 ?>
@@ -18,10 +18,10 @@ if($_SESSION["usuario"]!="admin"){
       <div id="cabecalho-login" align="right">
         <table id="texto">
           <tr>
-            <td> <?php echo "Ola " . $_SESSION["nome"] ?> </td>
+            <td  align="right"> <?php echo "Ola " . $_SESSION["nome"] ?> </td>
           </tr>
           <tr>
-            <td align="right"><input type="button" id="botao" onclick="" value="Sair"></td>
+            <td><a href="sair.php" id="no-link">Clique aqui </a> para sair</td>
           </tr>
         </table>
       </div>
@@ -34,10 +34,11 @@ if($_SESSION["usuario"]!="admin"){
             <td>Produto</td>
             <td>
               <select id="campo-curto" name="escolha">
+                <option>Op&ccedil;&otilde;es</option>
+                <option value="bandeira">Bandeira</option>
+                <option value="camiseta">Camiseta</option>
                 <option value="cd">CD</option>
                 <option value="dvd">DVD</option>
-                <option value="camiseta">Camiseta</option>
-                <option value="bandeira">Bandeira</option>
               </select>
             </td>
           </tr>
@@ -46,9 +47,9 @@ if($_SESSION["usuario"]!="admin"){
           </tr>
         </table>
       </form>
-      <form method="post" action="insere-produto.php">
-        <table id="texto" cellspacing="3">
-          <?php if (@$_GET["escolha"] == "cd") { ?>
+      <table id="texto" cellspacing="3">
+        <?php if (@$_GET["escolha"] == "cd") { ?>
+          <form method="post" action="insere-cd.php">
             <tr>
               <td id="texto-titulo" colspan="2">CD</td>
             </tr>
@@ -58,7 +59,7 @@ if($_SESSION["usuario"]!="admin"){
             </tr>
             <tr>
               <td>Descri&ccedil;&atilde;o</td>
-              <td><textarea rows="5" cols="29" style="border-radius: 8px; outline: 0;"></textarea></td>
+              <td><textarea rows="5" cols="32" id="campo-texto" name="descricao"></textarea></td>
             </tr>
             <tr>
               <td>Valor</td>
@@ -66,7 +67,7 @@ if($_SESSION["usuario"]!="admin"){
             </tr>
             <tr>
               <td>Dura&ccedil;&atilde;o</td>
-              <td><input type="text" id="campo-mais-curto" name="duracao">
+              <td><input type="time" id="campo-mais-curto" name="duracao">
             </tr>
             <tr>
               <td>Quantidade</td>
@@ -74,12 +75,14 @@ if($_SESSION["usuario"]!="admin"){
             </tr>
             <tr>
               <td>Faixas</td>
-              <td><textarea rows="8" cols="29" style="border-radius: 8px; outline: 0;"></textarea></td>
+              <td><textarea rows="8" cols=32 id="campo-texto" name="faixas"></textarea></td>
             </tr>
             <tr>
               <td><input type="submit" value="Cadastrar" id="botao"></td>
             </tr>
-          <?php } else if (@$_GET["escolha"] == "dvd") { ?>
+          </form>
+        <?php } else if (@$_GET["escolha"] == "dvd") { ?>
+          <form method="post" action="insere-dvd.php">
             <tr>
               <td id="texto-titulo" colspan="2">DVD</td>
             </tr>
@@ -89,7 +92,7 @@ if($_SESSION["usuario"]!="admin"){
             </tr>
             <tr>
               <td>Descri&ccedil;&atilde;o</td>
-              <td><textarea rows="5" cols="29" style="border-radius: 8px; outline: 0;"></textarea></td>
+              <td><textarea rows="5" cols=32 id="campo-texto" name="descricao"></textarea></td>
             </tr>
             <tr>
               <td>Valor</td>
@@ -97,7 +100,7 @@ if($_SESSION["usuario"]!="admin"){
             </tr>
             <tr>
               <td>Dura&ccedil;&atilde;o</td>
-              <td><input type="text" id="campo-mais-curto" name="duracao">
+              <td><input type="time" id="campo-mais-curto" name="duracao">
             </tr>
             <tr>
               <td>Quantidade</td>
@@ -105,12 +108,14 @@ if($_SESSION["usuario"]!="admin"){
             </tr>
             <tr>
               <td>Faixas</td>
-              <td><textarea rows="8" cols="29" style="border-radius: 8px; outline: 0;"></textarea></td>
+              <td><textarea rows="8" cols="32" id="campo-texto" name="faixas"></textarea></td>
             </tr>
             <tr>
               <td><input type="submit" value="Cadastrar" id="botao"></td>
             </tr>
-          <?php } else if (@$_GET["escolha"] == "camiseta") { ?>
+          </form>
+        <?php } else if (@$_GET["escolha"] == "camiseta") { ?>
+          <form method="post" action="insere-camiseta.php">
             <tr>
               <td id="texto-titulo" colspan="2">Camiseta</td>
             </tr>
@@ -120,11 +125,11 @@ if($_SESSION["usuario"]!="admin"){
             </tr>
             <tr>
               <td>Descri&ccedil;&atilde;o</td>
-              <td><textarea rows="5" cols="29" style="border-radius: 8px; outline: 0;"></textarea></td>
+              <td><textarea rows="5" cols="32" id="campo-texto" name="descricao"></textarea></td>
             </tr>
             <tr>
               <td>Material</td>
-              <td><input type="text" id="campo-longo" name="nome"></td>              
+              <td><input type="text" id="campo-longo" name="material"></td>              
             </tr>
             <tr>
               <td>Cor</td>
@@ -146,7 +151,9 @@ if($_SESSION["usuario"]!="admin"){
             <tr>
               <td><input type="submit" value="Cadastrar" id="botao"></td>
             </tr>
-          <?php } else if (@$_GET["escolha"] == "bandeira") { ?>
+          </form>
+        <?php } else if (@$_GET["escolha"] == "bandeira") { ?>
+          <form method="post" action="insere-bandeira.php">
             <tr>
               <td id="texto-titulo" colspan="2">Bandeira</td>
             </tr>
@@ -156,11 +163,11 @@ if($_SESSION["usuario"]!="admin"){
             </tr>
             <tr>
               <td>Descri&ccedil;&atilde;o</td>
-              <td><textarea rows="5" cols="29" style="border-radius: 8px; outline: 0;"></textarea></td>
+              <td><textarea rows="5" cols="32" id="campo-texto" name="descricao"></textarea></td>
             </tr>
             <tr>
               <td>Material</td>
-              <td><input type="text" id="campo-longo" name="nome"></td>              
+              <td><input type="text" id="campo-longo" name="material"></td>              
             </tr>
             <tr>
               <td>Cor</td>
@@ -177,9 +184,9 @@ if($_SESSION["usuario"]!="admin"){
             <tr>
               <td><input type="submit" value="Cadastrar" id="botao"></td>
             </tr>
-          <?php } ?>
-        </table>
-      </form>
+          </form>
+        <?php } ?>
+      </table>
     </div>
 
   </body>

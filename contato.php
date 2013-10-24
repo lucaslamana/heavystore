@@ -11,7 +11,7 @@
         <li><a href="produtos.php">Produtos</a></li>
         <li><a href="cadastro.php">Cadastre-se</a></li>
         <li><a href="#">Sobre</a></li>
-        <li><a href="contato.php">Contato</a></li>
+        <li><a href="contato.php"><b>Contato</b></a></li>
       </ul>
 
       <div id="menu-busca">
@@ -33,22 +33,29 @@
     <div id="conteudo">
 
       <form>
-        <table id="texto" align="center">
+        <table id="texto" cellspacing="5">
           <tr>
-            <td align="right">Nome</td>
-            <td><input type="text" id="campo-longo">
+            <td>Nome</td>
+            <?php 
+            session_start();
+            
+            if($_SESSION["usuario"]!= "") { ?>
+            <td><?php echo $_SESSION["nome"]; ?></td>
+            <?php  }else{ ?>
+            <td><input type="text" id="campo-longo"></td>
+            <?php } ?>
           </tr>
           <tr>
-            <td align="right">E-mail</td>
-            <td><input type="text" id="campo-longo">
+            <td>E-mail</td>
+            <td><input type="text" id="campo-longo"></td>
           </tr>
           <tr>
-            <td align="right">Assunto</td>
-            <td><input type="text" id="campo-longo">
+            <td>Assunto</td>
+            <td><input type="text" id="campo-longo"></td>
           </tr>
           <tr>
-            <td align="right">Mensagem</td>
-            <td><textarea rows="5" cols="29" style="border-radius: 8px; outline: 0;"></textarea>
+            <td>Mensagem</td>
+            <td><textarea rows="5" cols="32" id="campo-texto"></textarea></td>
           </tr>
           <tr>
             <td colspan="2" align="center"><input type="submit" value="Enviar" id="botao">
