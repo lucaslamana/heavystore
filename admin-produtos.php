@@ -1,7 +1,7 @@
 <?php
 include("conexao.php");
 include("verificacao.php");
-if($_SESSION["usuario"]!="admin"){
+if ($_SESSION["usuario"] != "admin") {
   header("location: admin.php");
 }
 ?>
@@ -56,16 +56,19 @@ if($_SESSION["usuario"]!="admin"){
         ?>
         <tr>
           <td><?php echo $procura["nome"]; ?></td>
-          <td><?php echo $procura["descricao"]; ?></td>
+          <td><?php
+            $texto = $procura["descricao"];
+            echo (substr($texto, 0, 55)) . "...";
+            ?></td>
           <td align="center"><?php echo "R$ " . $procura["valor"] . ",00"; ?></td>
-          <td align="center"><?php echo ["tipo"]; ?></td>
+          <td align="center"><?php echo $procura["tipo"]; ?></td>
           <td align="center"><?php echo $procura["quantidade"]; ?></td>
           <td align="center">
             <a href="#"><img src="images/edit.png" width="16" height="16" border="0"></a>
             <a href="#"><img src="images/view.png" width="16" height="16" border="0"></a>
-            <a href="excluir.php?id=<?php echo $procura["id"]; ?>"><img src="images/delete.png" width="16" height="16" border="0"></a></td>
+            <a href="excluir-produto.php?id=<?php echo $procura["id"]; ?>"><img src="images/delete.png" width="16" height="16" border="0"></a></td>
         </tr>
-      <?php } ?>
+<?php } ?>
     </table>
   </div>
 </body>

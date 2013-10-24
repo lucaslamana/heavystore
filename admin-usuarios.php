@@ -35,12 +35,35 @@ if ($_SESSION["usuario"] != "admin") {
     </div>
 
     <div id="conteudo">
+      <table width="100%" id="texto" border="1" bordercolor="white">
+        <tr>
+          <th bgcolor="red" align="center">Nome</th>
+          <th bgcolor="red" align="center">Usu&aacute;rio</th>
+          <th bgcolor="red" align="center">E-mail</th>
+          <th bgcolor="red" align="center">Cidade</th>
+          <th bgcolor="red" align="center">UF</th>
+          <th bgcolor="red" align="center">Op&ccedil;&otilde;es</th>
+        </tr>
+        <?php
+        include("conexao.php");
+
+        $query = "select * from usuarios order by nome";
+        $sql = mysql_query($query);
+
+        while ($procura = mysql_fetch_array($sql)) {
+          ?>
+          <tr>
+            <td><?php echo $procura["nome"]; ?></td>
+            <td><?php echo $procura["usuario"]; ?></td>
+            <td><?php echo $procura["email"]; ?></td>
+            <td><?php echo (!empty($procura["cidade"])) ? '$dados["cidade"]' : 'N&atilde;o informado'; ?></td>
+            <td><?php echo (!empty($procura["uf"])) ? '$dados["UF"]' : 'N&atilde;o informado'; ?></td>
+            <td align="center">
+            <a href="#"><img src="images/view.png" width="16" height="16" border="0"></a>
+            <a href="excluir-usuario.php?id=<?php echo $procura["id"]; ?>"><img src="images/delete.png" width="16" height="16" border="0"></a></td>
+          </tr>
+        <?php } ?>
 
     </div>
-
-    <div id="rodape">
-
-    </div>
-
   </body>
 </html>
