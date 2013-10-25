@@ -61,12 +61,13 @@
         
           <div id="conteudo-box">
             <?php echo $dados["nome"]."<br>"; ?>
-            <br><br>
-            <img src="images/produtos/<?php echo $dados["foto"]; ?> " width="200">
-            <br><br>
-            <?php echo "<br>".$dados["descricao"]."<br>"; ?>
+            <br>
+            <img src="images/produtos/<?php echo $dados["foto"]; ?> " width="150dx">
+            <br>
+            <?php echo "<br>".$dados["descricao"]; ?>
             <br>
             <?php echo "R$ ".$dados["valor"].",00"; ?>
+            <br>
             </center>
           </div>
         <?php } ?>
