@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="padrao.css" type="text/css"/>
-    <title>Home</title>
+    <title>Produtos</title>
   </head>
   <body bgcolor="#000">
 
@@ -50,22 +50,22 @@
           </tr>
         </table>
       </div>
-      <div id="conteudo-centro">
+      <div id="conteudo-centro" align="center">
 
         <?php
-        $txt = "select * from produtos join fotos on fotos.produtosid = produtos.id";
+        $txt = "select * from produtos join fotos on fotos.produtosid = produtos.id
+          order by produtos.id desc";
         $sql = mysql_query($txt);
 
-        while ($dados = mysql_fetch_array($sql)) {
-          ?>
+        while ($dados = mysql_fetch_array($sql)) { ?>
+        
           <div id="conteudo-box">
-            <?php echo $dados["nome"]; ?>
-            <br>
-            <?php echo $dados["descricao"]; ?>
-            <br><br>
-            <center><img src = "images/produtos/<?php echo $dados["foto"];?> " height="150dx"></center>
-
-        </div>
+            <?php echo $dados["nome"]."<br>"; ?>
+            <img src="images/produtos/<?php echo $dados["foto"]; ?> " width="200">
+            <?php echo "<br>".$dados["descricao"]."<br>"; ?>
+            <?php echo "R$ ".$dados["valor"].",00"; ?>
+          </div>
+        
         <?php } ?>
       </div>
     </div>

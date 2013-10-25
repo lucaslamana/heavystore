@@ -7,6 +7,7 @@ if ($_SESSION["usuario"] != "admin") {
 
 <html>
   <head>
+    <title>Gerenciamento de usuarios</title>
     <link rel="stylesheet" href="padrao.css" type="text/css">
   </head>
   <body bgcolor="#000">
