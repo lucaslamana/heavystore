@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="padrao.css" type="text/css"/>
-    <title>Produtos</title>
+    <title>Home</title>
   </head>
   <body bgcolor="#000">
 
@@ -61,11 +61,14 @@
         
           <div id="conteudo-box">
             <?php echo $dados["nome"]."<br>"; ?>
+            <br><br>
             <img src="images/produtos/<?php echo $dados["foto"]; ?> " width="200">
+            <br><br>
             <?php echo "<br>".$dados["descricao"]."<br>"; ?>
+            <br>
             <?php echo "R$ ".$dados["valor"].",00"; ?>
+            </center>
           </div>
-        
         <?php } ?>
       </div>
     </div>
