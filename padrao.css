@@ -90,12 +90,22 @@
   float: left;
 }
 
-#conteudo-box{
-  width: 220px;
+#conteudo-detalhe{
+  width: 45%;
   height: auto;
   float: left;
   margin: 10px;
-  border: #fff thin solid;
+  border: #FF0000 thin solid;
+  font-style: normal;
+  background-color: #F8F8FF;
+}
+
+#conteudo-box{
+  width: 220px;
+  height: 300px;
+  float: left;
+  margin: 5px;
+  border: #FF0000 thin solid;
   font-style: normal;
   background-color: #F8F8FF;
 }

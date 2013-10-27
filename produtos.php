@@ -57,18 +57,23 @@
           order by produtos.id desc";
         $sql = mysql_query($txt);
 
-        while ($dados = mysql_fetch_array($sql)) { ?>
-        
+        while ($dados = mysql_fetch_array($sql)) {
+          ?>
+
           <div id="conteudo-box">
-            <?php echo $dados["nome"]."<br>"; ?>
             <br>
+            <?php echo $dados["tipo"]?>
+            <br><br>
             <img src="images/produtos/<?php echo $dados["foto"]; ?> " width="150dx">
             <br>
-            <?php echo "<br>".$dados["descricao"]; ?>
+            <?php echo $dados["nome"]. " - ".$dados["descricao"]; ?>
             <br>
-            <?php echo "R$ ".$dados["valor"].",00"; ?>
+            <?php echo "R$ " . $dados["valor"] . ",00"; ?>
             <br>
+            <a href="detalhe-produto.php?id=<?php echo $dados["id"]; ?>"
+               title="produtos"> <img src="images/view.png" width="16" height="16" border="0" /></a>
             </center>
+
           </div>
         <?php } ?>
       </div>
