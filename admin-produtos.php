@@ -59,7 +59,7 @@ if ($_SESSION["usuario"] != "admin") {
           <td><?php echo $procura["nome"]; ?></td>
           <td><?php
             $texto = $procura["descricao"];
-            echo (substr($texto, 0, 55)) . "...";
+            echo strlen($texto) > 50 ? (substr($texto, 0, 50)) . "..." : $texto;
             ?></td>
           <td align="center"><?php echo "R$ " . $procura["valor"] . ",00"; ?></td>
           <td align="center"><?php echo $procura["tipo"]; ?></td>
@@ -68,10 +68,10 @@ if ($_SESSION["usuario"] != "admin") {
             <a href="#"><img src="images/edit.png" width="16" height="16" border="0"></a>
             <a href="#"><img src="images/view.png" width="16" height="16" border="0"></a>
             <a href="excluir-produto.php?id=<?php echo $procura["id"]; ?>"><img src="images/delete.png" width="16" height="16" border="0"></a>
-            <a href="incluir-foto.php?nome=<?php echo $procura["nome"]?>&id=<?php echo $procura["id"]?>"><img src="images/foto.png" width="20" height="20" border="0"></td>
-        </tr>
-<?php } ?>
-    </table>
-  </div>
-</body>
-</html>
+            <a href="incluir-foto.php?nome=<?php echo $procura["nome"] ?>&id=<?php echo $procura["id"] ?>"><img src="images/foto.png" width="20" height="20" border="0"></td>
+              </tr>
+            <?php } ?>
+            </table>
+            </div>
+            </body>
+            </html>

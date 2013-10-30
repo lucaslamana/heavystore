@@ -20,7 +20,7 @@
         <form method="post" style="margin: 0px">
           <table>
             <tr>
-              <td><input type="text" id="campo" style="width: 200px;" name="procurar"></td>
+              <td><input type="text" id="campo-curto" name="procurar"></td>
               <td><input type="image" src="images/search.png" style="width: 18px; height: 18px; border-radius: 8px;" onclick="return alertar();" alt="Submit"></td>
             </tr>
           </table>  
@@ -35,18 +35,21 @@
 
     <div id="conteudo">
       <div id="conteudo-esquerdo">
-        <table id="texto">
+        <table cellspacing="5">
           <tr>
-            <td style="font-weight: bold;">Categorias</td>
+            <td id="texto-titulo">Categorias</td>
           </tr>
           <tr>
-            <td>Discos</td>
+            <td><a href="#" id="no-link">Bandeiras</a></td>
           </tr>
           <tr>
-            <td>Camisetas</td>
+            <td><a href="#" id="no-link">Camisetas</a></td>
           </tr>
           <tr>
-            <td>Outros</td>
+            <td><a href="#" id="no-link">CDs</a></td>
+          </tr>
+          <tr>
+            <td><a href="#" id="no-link">DVDs</a></td>
           </tr>
         </table>
       </div>

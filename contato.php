@@ -18,7 +18,7 @@
         <form method="post" style="margin: 0px">
           <table>
             <tr>
-              <td><input type="text" id="campo-longo-longo" style="width: 200px;" name="procurar"></td>
+              <td><input type="text" id="campo-curto" name="procurar"></td>
               <td><input type="image" src="images/search.png" style="width: 18px; height: 18px; border-radius: 8px;" onclick="return alertar();" alt="Submit"></td>
             </tr>
           </table>  

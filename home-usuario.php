@@ -1,3 +1,5 @@
+<?php include("verificacao.php");?>
+
 <html>
   <head>
     <link rel="stylesheet" href="padrao.css" type="text/css"/>
@@ -30,12 +32,32 @@
       </div>
       
       <div id="cabecalho-login">
-        <!--Boas vindas usuário, botão para sair -->
+        <table id="texto">
+          <tr>
+            <td align="right"><?php echo "Ol&aacute; ".$_SESSION["usuario"]?></td>
+          </tr>
+          <tr>
+            <td><a href="sair.php" id="no-link">Clique aqui</a> para sair</td>
+          </tr>
+        </table>
       </div>
     </div>
 
     <div id="conteudo">
-      <div id="conteudo-esquerdo"> </div>
+      <div id="conteudo-esquerdo">
+        <table cellspacing="5">
+          <tr>
+            <td id="texto-titulo">Cadastro</td>
+          </tr>
+          <tr>
+            <td><a href="#" id="no-link">Informa&ccedil;&otilde;es Pessoais</a></td>
+          </tr>
+          <tr>
+            <td><a href="#" id="no-link">Localiza&ccedil;&atilde;o</a></td>
+          </tr>
+          
+        </table>
+      </div>
       <div id="conteudo-centro"> </div>
     </div>
 

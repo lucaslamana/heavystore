@@ -17,7 +17,7 @@
         <form method="post" style="margin: 0px">
           <table>
             <tr>
-              <td><input type="text" id="campo-curto" style="width: 200px;" name="procurar"></td>
+              <td><input type="text" id="campo-curto" name="procurar"></td>
               <td><input type="image" src="images/search.png" style="width: 18px; height: 18px; border-radius: 8px;" onclick="" alt="Submit"></td>
             </tr>
           </table>  
@@ -50,8 +50,6 @@
     </div>
     
     <div id="conteudo"> </div>
-    
-    <div id="rodape"> </div>
     
   </body>
 </html>
