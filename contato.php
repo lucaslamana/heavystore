@@ -54,7 +54,7 @@
             <td><input type="text" id="campo-longo"></td>
           </tr>
           <tr>
-            <td>Mensagem</td>
+            <td  valign="top">Mensagem</td>
             <td><textarea rows="5" cols="32" id="campo-texto"></textarea></td>
           </tr>
           <tr>

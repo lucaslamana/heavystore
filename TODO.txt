@@ -9,7 +9,7 @@ TODO
 []  LL Página principal do usuário
 []  LB População banco de dados
 []  LB Ajustar tamanho Imagens
-
+[]     Formatar os numeros com number_format
 
 Filtragem de produtos
   

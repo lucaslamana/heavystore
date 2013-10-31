@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="padrao.css" type="text/css"/>
-    <title>Home</title>
+    <title>Produtos</title>
   </head>
   <body bgcolor="#000">
 
