@@ -101,13 +101,15 @@
 }
 
 #conteudo-box{
-  width: 220px;
+  width: 250px;
   height: 300px;
   float: left;
   margin: 5px;
-  border: #FF0000 thin solid;
   font-style: normal;
-  background-color: #F8F8FF;
+  background-color: #FFF;
+  font-family: Calibri;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 #rodape{

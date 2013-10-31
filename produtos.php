@@ -64,19 +64,23 @@
           ?>
 
           <div id="conteudo-box">
-            <br>
-            <?php echo $dados["tipo"]?>
-            <br><br>
-            <img src="images/produtos/<?php echo $dados["foto"]; ?> " width="150dx">
-            <br>
-            <?php echo $dados["nome"]. " - ".$dados["descricao"]; ?>
-            <br>
-            <?php echo "R$ " . $dados["valor"] . ",00"; ?>
-            <br>
-            <a href="detalhe-produto.php?id=<?php echo $dados["id"]; ?>"
-               title="produtos"> <img src="images/view.png" width="16" height="16" border="0" /></a>
-            </center>
-
+            <table>
+              <tr>
+                <td id="texto-titulo" style="color: #000;" align="center"><?php echo $dados["tipo"] ?></td>
+              </tr>
+              <tr>
+                <td align="center"><a href="detalhe-produto.php?id=<?php echo $dados["id"]; ?>"><img src="images/produtos/<?php echo $dados["foto"]; ?>" width="150dx"></a></td>
+              </tr>
+              <tr>
+                <td align="center"><a href="detalhe-produto.php?id=<?php echo $dados["id"]; ?>" id="no-link" style="color: #000;"><?php echo $dados["nome"] . " - " . $dados["descricao"]; ?></a></td>
+              </tr>
+              <tr>
+                <td align="center"><?php echo "R$ " . $dados["valor"] . ",00"; ?></td>
+              </tr>
+              <tr>
+                <td align="center"><a href="#"><img src="images/botao_comprar.png" width="70" height="30"/></a></td>
+              </tr>
+            </table>
           </div>
         <?php } ?>
       </div>
