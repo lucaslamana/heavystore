@@ -34,31 +34,52 @@
     </div>
 
     <div id="conteudo">
+      <?php
+      $txt = "select * from produtos join fotos on fotos.produtosid = produtos.id where produtos.id= $_GET[id]";
+      $sql = mysql_query($txt);
+      $dados = mysql_fetch_array($sql);
+      ?>
 
       <div id="conteudo-detalhe">
-        <?php
-        $txt = "select * from produtos join fotos on fotos.produtosid = produtos.id where produtos.id= $_GET[id]";
-        $sql = mysql_query($txt);
-        $dados = mysql_fetch_array($sql);
-        ?><center>
+        <br>
+        <img src="images/produtos/<?php echo $dados["foto"]; ?> " width="400dx" height="400dx">
+        <br>
+      </div>    
+
+      <div id="conteudo-detalhe" >
+        <form id="texto-detalhe">
+          <table id="texto-detalhe" width="120%">
+            <tr>
+              <td align="center"><a href="#"><img src="images/botao_comprar.png" width="70" height="30"/></a></td>
+              <td align="center"><?php
+                $valor = $dados["valor"];
+                echo "Valor: " . " R$ " . number_format($valor, 2, ',', '');
+                ?> </td>
+            </tr>
+          </table>
+          <br>
+          Detalhes do Produto
+          <br><br>              
           <?php echo $dados["tipo"]; ?>
           <br>
           <?php echo $dados["nome"]; ?>
           <br>
           <?php echo $dados["descricao"]; ?>
           <br>
-          <?php echo "R$ " . $dados["valor"] . ",00"; ?>
+          <?php echo $dados["cor"] ?>
+          <br>
+          <?php echo $dados["material"] ?>
           <br>
           <?php echo $dados["tamanho"] ?>
           <br>
-          <?php echo $dados["relacaomusicas"] ?>
-          <br></center>
+          <?php
+          $relmusc = $dados["relacaomusicas"];
+          echo nl2br($relmusc)
+          ?>
+          <br>
+        </form>
       </div>
-      <div id="conteudo-detalhe">
-        <br><center>
-          <img src="images/produtos/<?php echo $dados["foto"]; ?> " width="400dx">
-          <br></center>
-      </div>
+
     </div>
 
   </body>

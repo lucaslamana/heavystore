@@ -4,6 +4,12 @@
   color: #fff;
 }
 
+#texto-detalhe{
+  font-family: Calibri;
+  font-size: 18px;
+  color: #ffffff;
+}
+
 #texto-titulo{
   font-family: Calibri;
   font-size: 22px;
@@ -91,13 +97,12 @@
 }
 
 #conteudo-detalhe{
-  width: 45%;
+  width: auto;
   height: auto;
   float: left;
   margin: 10px;
-  border: #FF0000 thin solid;
   font-style: normal;
-  background-color: #F8F8FF;
+  background-color: #000000;
 }
 
 #conteudo-box{

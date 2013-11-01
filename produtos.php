@@ -69,13 +69,16 @@
                 <td id="texto-titulo" style="color: #000;" align="center"><?php echo $dados["tipo"] ?></td>
               </tr>
               <tr>
-                <td align="center"><a href="detalhe-produto.php?id=<?php echo $dados["id"]; ?>"><img src="images/produtos/<?php echo $dados["foto"]; ?>" width="150dx"></a></td>
+                <td align="center"><a href="detalhe-produto.php?id=<?php echo $dados["id"]; ?>"><img src="images/produtos/<?php echo $dados["foto"]; ?>" width="150dx" height="150dx"></a></td>
               </tr>
               <tr>
                 <td align="center"><a href="detalhe-produto.php?id=<?php echo $dados["id"]; ?>" id="no-link" style="color: #000;"><?php echo $dados["nome"] . " - " . $dados["descricao"]; ?></a></td>
               </tr>
               <tr>
-                <td align="center"><?php echo "R$ " . $dados["valor"] . ",00"; ?></td>
+                <td align="center"><?php
+                  $valor = $dados["valor"];
+                  echo "R$ " . number_format($valor, 2, ',', '');
+                  ?></td>
               </tr>
               <tr>
                 <td align="center"><a href="#"><img src="images/botao_comprar.png" width="70" height="30"/></a></td>
