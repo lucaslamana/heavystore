@@ -113,6 +113,27 @@ if ($_SESSION["usuario"] != "admin") {
         <td>Nome: </td>
         <td><?php echo $produto["nome"]; ?></td>
       </tr>
+       <tr>
+        <td>Descri&ccedil;&atilde;o: </td>
+        <td><?php echo $produto["descricao"]; ?></td>
+      </tr>
+      <tr>
+        <td>Valor: </td>
+        <td><?php echo $produto["valor"]; ?></td>
+      </tr>
+      <tr>
+        <td>Dura&ccedil;&atilde;o: </td>
+        <td><?php echo $produto["duracao"]; ?></td>
+      </tr>
+      <tr>
+        <td>Quantidade: </td>
+        <td><?php echo $produto["quantidade"]; ?></td>
+      </tr>
+      <tr>
+        <td valign="top">Faixas: </td>
+        <td><?php $faixas = $produto["relacaomusicas"];
+        echo nl2br($faixas); ?></td>
+      </tr>
       <?php } else if($produto["tipo"]=="DVD") {?>
       <tr>
         <td colspan="2" id="texto-titulo">Detalhes do CD</td>
@@ -120,6 +141,27 @@ if ($_SESSION["usuario"] != "admin") {
       <tr>
         <td>Nome: </td>
         <td><?php echo $produto["nome"]; ?></td>
+      </tr>
+      <tr>
+        <td>Descri&ccedil;&atilede;o: </td>
+        <td><?php echo $produto["descricao"]; ?></td>
+      </tr>
+      <tr>
+        <td>Valor: </td>
+        <td><?php echo $produto["valor"]; ?></td>
+      </tr>
+      <tr>
+        <td>Dura&ccedil;&atilde;o: </td>
+        <td><?php echo $produto["duracao"]; ?></td>
+      </tr>
+      <tr>
+        <td>Quantidade: </td>
+        <td><?php echo $produto["quantidade"]; ?></td>
+      </tr>
+      <tr>
+        <td>Faixas: </td>
+        <td><?php $faixas = $produto["relacaomusicas"];
+        echo nl2br($faixas); ?></td>
       </tr>
       <?php } ?>
     </table>

@@ -61,8 +61,10 @@ if ($_SESSION["usuario"] != "admin") {
             $texto = $procura["descricao"];
             echo strlen($texto) > 50 ? (substr($texto, 0, 50)) . "..." : $texto;
             ?></td>
-          <td align="center"><?php $valor = $procura["valor"];
-            echo "R$ " . number_format($valor, 2, ',', ''); ?></td>  
+          <td align="center"><?php
+            $valor = $procura["valor"];
+            echo "R$ " . number_format($valor, 2, ',', '.');
+            ?></td>  
           <td align="center"><?php echo $procura["tipo"]; ?></td>
           <td align="center"><?php echo $procura["quantidade"]; ?></td>
           <td align="center">
@@ -72,7 +74,7 @@ if ($_SESSION["usuario"] != "admin") {
             <a href="incluir-foto.php?nome=<?php echo $procura["nome"] ?>&id=<?php echo $procura["id"] ?>"><img src="images/foto.png" width="20" height="20" border="0"></td>
               </tr>
             <?php } ?>
-            </table>
-            </div>
-            </body>
-            </html>
+      </table>
+    </div>
+  </body>
+</html>
