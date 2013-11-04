@@ -165,6 +165,23 @@ if ($_SESSION["usuario"] != "admin") {
       </tr>
       <?php } ?>
     </table>
+    <?php 
+    $query = "select * from fotos where produtosid = " . $produto["id"]. " ";
+    $sql = mysql_query($query);
+    
+    while($fotos = mysql_fetch_array($sql)){
+    ?>
+    <div id="conteudo-fotos">
+      <table  cellpading="0" cellspacing="0">
+        <tr>
+          <td><img src="images/produtos/<?php echo $fotos["foto"]; ?>" width="200" height="200" style="border: red thin solid; border-radius: 10px;"/></td>
+        </tr>
+        <tr>
+          <td align="center"><a href="excluir-imagem.php?id=<?php echo $fotos["id"]; ?>&idproduto=<?php echo $_GET[id]; ?>"  id="no-link">Excluir imagem</p></td>
+        </tr>
+      </table>
+    </div>
+    <?php } ?>
   </div>
   </body>
 </html>
