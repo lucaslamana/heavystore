@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tempo de Geração: 01/11/2013 às 03:28
+-- Tempo de Geração: 04/11/2013 às 03:10
 -- Versão do servidor: 5.5.32
 -- Versão do PHP: 5.4.16
 
@@ -68,6 +68,25 @@ INSERT INTO `fotos` (`idf`, `foto`, `produtosid`) VALUES
 (5, 'cd_ironmaiden_seventhson1.jpg', 3),
 (6, 'camiseta_vanhalen_1984_1.jpg', 4),
 (8, 'cd_helloween_masteroftheRings.jpg', 5);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `historia`
+--
+
+CREATE TABLE IF NOT EXISTS `historia` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `texto` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Fazendo dump de dados para tabela `historia`
+--
+
+INSERT INTO `historia` (`id`, `texto`) VALUES
+(1, 'O Heavy Metal mudou os rumos da música, Fortemente influenciado pelo blues, o gênero surgiu no início da década de 1970 com a banda inglesa Black Sabbath, liderada por Ozzy Osbourne. Num cenário musical e cultural dominado pelos hippies e o lema “paz e amor” e, em meio a um contexto de guerras e conflitos sociais, o peso do heavy metal chegou para refletir as insatisfações e a obscuridade de uma época.\r\nAs primeiras bandas de heavy metal como Led Zeppelin, Black Sabbath e Deep Purple atraíam grandes audiências, um atributo comum em toda a história do gênero.\r\nJudas Priest ajudou a impulsionar a evolução do gênero suprimindo muito da influência do blues presente na primeira geração do metal, o Motörhead introduziu agressividade e fúria nos vocais, influência do punk rock, e uma crescente ênfase na velocidade. Bandas como Iron Maiden seguiram a mesma linha. Antes do final da década, o heavy metal tinha atraído uma sequência de fãs no mundo inteiro conhecido como "metalheads" ou "headbangers" e também como "metaleiros" em países de idioma português.');
 
 -- --------------------------------------------------------
 

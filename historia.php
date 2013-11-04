@@ -4,10 +4,11 @@
     <title>Hist&oacute;ria</title>
   </head>
   <body bgcolor="#000">
+    <?php include ("conexao.php"); ?>
 
     <div id="menu-topo"><ul id="menu-lista">
-        <li><a href="#">Hist&oacute;ria</a></li>
-        <li><a href="#">Produtos</a></li>
+        <li><a href="historia.php">Hist&oacute;ria</a></li>
+        <li><a href="produtos.php">Produtos</a></li>
         <li><a href="cadastro.php">Cadastre-se</a></li>
         <li><a href="#">Sobre</a></li>
         <li><a href="contato.php">Contato</a></li>
@@ -28,11 +29,22 @@
       <div id="cabecalho-logo">
         <a href="index.html"><img src="images/logo.jpg"/></a>
       </div>
-      
+
     </div>
 
-    <div id="conteudo">
-	      
+    <div id="conteudo" >
+      <?php
+      $txt = "select texto from historia";
+      $sql = mysql_query($txt);
+      $t = mysql_fetch_array($sql);
+      ?>
+      <br><center><img src="images/heavymetal.png" height="55" width="280"/></center><br>
+      <font id="texto-titulo">
+      <?php
+      $hist = $t["texto"];
+      echo nl2br($hist);
+      ?>
+      </font>
     </div>
 
   </body>

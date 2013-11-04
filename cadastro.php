@@ -53,7 +53,7 @@
   <body bgcolor="#000">
 
     <div id="menu-topo"><ul id="menu-lista">
-        <li><a href="#">Hist&oacute;ria</a></li>
+        <li><a href="historia.php">Hist&oacute;ria</a></li>
         <li><a href="produtos.php">Produtos</a></li>
         <li><a href="cadastro.php"><b>Cadastre-se</b></a></li>
         <li><a href="#">Sobre</a></li>

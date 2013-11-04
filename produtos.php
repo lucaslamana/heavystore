@@ -9,7 +9,7 @@
     <?php include ("conexao.php"); ?>
 
     <div id="menu-topo"><ul id="menu-lista">
-        <li><a href="#">Hist&oacute;ria</a></li>
+        <li><a href="historia.php">Hist&oacute;ria</a></li>
         <li><a href="produtos.php"><b>Produtos</b></a></li>
         <li><a href="cadastro.php">Cadastre-se</a></li>
         <li><a href="#">Sobre</a></li>
@@ -81,7 +81,7 @@
                   ?></td>
               </tr>
               <tr>
-                <td align="center"><a href="#"><img src="images/botao_comprar.png" width="70" height="30"/></a></td>
+                <td align="center"><a href="#"><img src="images/botao_comprar.png" width="80" height="35"/></a></td>
               </tr>
             </table>
           </div>

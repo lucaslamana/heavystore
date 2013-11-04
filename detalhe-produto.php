@@ -9,7 +9,7 @@
     <?php include ("conexao.php"); ?>
 
     <div id="menu-topo"><ul id="menu-lista">
-        <li><a href="#">Hist&oacute;ria</a></li>
+        <li><a href="historia.php">Hist&oacute;ria</a></li>
         <li><a href="produtos.php"><b>Produtos</b></a></li>
         <li><a href="cadastro.php">Cadastre-se</a></li>
         <li><a href="#">Sobre</a></li>
@@ -50,7 +50,7 @@
         <form id="texto-detalhe">
           <table id="texto-detalhe" width="120%">
             <tr>
-              <td align="center"><a href="#"><img src="images/botao_comprar.png" width="70" height="30"/></a></td>
+              <td align="center"><a href="#"><img src="images/botao_comprar.png" width="90" height="40"/></a></td>
               <td align="center"><?php
                 $valor = $dados["valor"];
                 echo "Valor: " . " R$ " . number_format($valor, 2, ',', '');
