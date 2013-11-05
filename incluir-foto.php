@@ -36,7 +36,7 @@ include("verificacao.php");
       </ul>
     </div>
     <div id="conteudo">
-      <form method="post" action="upload-foto.php?id=<?php echo $_GET["id"] ?>" enctype="multipart/form-data">
+      <form method="post" action="upload-foto.php?nome=<?php echo $_GET["nome"]?>&id=<?php echo $_GET["id"] ?>" enctype="multipart/form-data">
         <table id="texto" cellspacing="5">
           <tr>
             <td>Nome:</td>
@@ -48,18 +48,19 @@ include("verificacao.php");
           </tr>
         </table>
       </form>
+      
+      <div id="conteudo-fotos">
       <?php
       
       include("conexao.php");
       $query = "select * from fotos where produtosid = '$_GET[id]'";
       $sql = mysql_query($query);
       
-      while ($foto = mysql_fetch_array($sql)) {
-        ?>
-
-        <img src="images/produtos/<?php echo $foto["foto"]; ?>" width="150">
-
+      while ($fotos = mysql_fetch_array($sql)) {
+      ?>
+        <img src="images/produtos/<?php echo $fotos["foto"]; ?>" id="thumbnail"/>
       <?php } ?>
+      </div>
     </div>
 
   </body>

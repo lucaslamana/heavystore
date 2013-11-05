@@ -59,7 +59,7 @@ if ($_SESSION["usuario"] != "admin") {
             </tr>
             <tr>
               <td valign="top">Descri&ccedil;&atilde;o</td>
-              <td><textarea rows="5" cols="32" id="campo-texto" name="descricao"></textarea></td>
+              <td><textarea rows="5" cols="29" id="campo-texto" name="descricao"></textarea></td>
             </tr>
             <tr>
               <td>Valor</td>
@@ -75,7 +75,7 @@ if ($_SESSION["usuario"] != "admin") {
             </tr>
             <tr>
               <td valign="top">Faixas</td>
-              <td><textarea rows="8" cols=32 id="campo-texto" name="faixas"></textarea></td>
+              <td><textarea rows="8" cols="29" id="campo-texto" name="faixas"></textarea></td>
             </tr>
             <tr>
               <td><input type="submit" value="Cadastrar" id="botao"></td>
@@ -92,7 +92,7 @@ if ($_SESSION["usuario"] != "admin") {
             </tr>
             <tr>
               <td  valign="top">Descri&ccedil;&atilde;o</td>
-              <td><textarea rows="5" cols=32 id="campo-texto" name="descricao"></textarea></td>
+              <td><textarea rows="5" cols="29" id="campo-texto" name="descricao"></textarea></td>
             </tr>
             <tr>
               <td>Valor</td>
@@ -108,7 +108,7 @@ if ($_SESSION["usuario"] != "admin") {
             </tr>
             <tr>
               <td  valign="top">Faixas</td>
-              <td><textarea rows="8" cols="32" id="campo-texto" name="faixas"></textarea></td>
+              <td><textarea rows="8" cols="29" id="campo-texto" name="faixas"></textarea></td>
             </tr>
             <tr>
               <td><input type="submit" value="Cadastrar" id="botao"></td>
@@ -125,7 +125,7 @@ if ($_SESSION["usuario"] != "admin") {
             </tr>
             <tr>
               <td  valign="top">Descri&ccedil;&atilde;o</td>
-              <td><textarea rows="5" cols="32" id="campo-texto" name="descricao"></textarea></td>
+              <td><textarea rows="5" cols="29" id="campo-texto" name="descricao"></textarea></td>
             </tr>
             <tr>
               <td>Material</td>
@@ -163,7 +163,7 @@ if ($_SESSION["usuario"] != "admin") {
             </tr>
             <tr>
               <td  valign="top">Descri&ccedil;&atilde;o</td>
-              <td><textarea rows="5" cols="32" id="campo-texto" name="descricao"></textarea></td>
+              <td><textarea rows="5" cols="29" id="campo-texto" name="descricao"></textarea></td>
             </tr>
             <tr>
               <td>Material</td>

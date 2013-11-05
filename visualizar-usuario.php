@@ -8,7 +8,7 @@ if($_SESSION["usuario"]!="admin"){
 
 <html>
   <head>
-    <title>Visualizar usu&aacute;rio</title>
+    <title>Visualizar</title>
     <link rel="stylesheet" href="padrao.css" type="text/css">
   </head>
   <body bgcolor="#000">

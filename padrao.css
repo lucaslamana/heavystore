@@ -270,3 +270,16 @@
   box-shadow: red 0.2em 0.2em 0.1em;
   outline: 0;
 }
+
+#thumbnail{
+   width: 200px;
+   height: 200px;
+   border: red thin solid;
+   border-radius: 10px;
+   margin-top: 3px;
+   margin-bottom: 3px;
+   margin-left: 3px;
+   padding: 0px;
+   position: relative;
+   float: left;
+}

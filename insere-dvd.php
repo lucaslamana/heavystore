@@ -1,5 +1,6 @@
 <?php
 
+include("verificacao.php");
 include("conexao.php");
 
 $query = "insert into produtos (nome, descricao, valor, duracao, quantidade,
