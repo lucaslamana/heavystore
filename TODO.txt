@@ -1,16 +1,21 @@
 TODO
 
-[X] LL Upload de fotos para os produtos
+
 [X] LB Listagem de produtos na pagina de produtos
 [X] LB Página de detalhe dos produtos
-[]  LL Página de cadastro de endereço
-[]     Página de Sobre
-[]  LB Página de história
-[]  LL Página principal do usuário
+[X] LB Página de história
 [X] LB População banco de dados
-[]  LB Ajustar tamanho Imagens
 [X] LB Formatar os numeros com number_format
-[]     Filtragem de produtos
+[X] LB Ajustar tamanho Imagens
+[X] LL Upload de fotos para os produtos
 [X] LL Gerenciamento de produtos na parte administrativa
-[X]    Gerenciamento de usuários na parte administrativa
-[]     Página index
+[X] LL Gerenciamento de usuários na parte administrativa
+
+
+[] LB Página Carrinho-Compra
+[]    Página index
+[] LL Página de cadastro de endereço
+[] LL Página principal do usuário
+[]    Página de Sobre
+[] LB Adicionar imagens página historia
+[]    Filtragem de produtos

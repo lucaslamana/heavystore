@@ -35,15 +35,23 @@
 
     <div id="conteudo">
       <?php
-      $txt = "select * from produtos join fotos on fotos.produtosid = produtos.id where produtos.id= $_GET[id]";
+      $txt = "select * from produtos join fotos on fotos.produtosid = produtos.id where produtos.id= $_GET[id] and fotos.principal=0";
       $sql = mysql_query($txt);
       $dados = mysql_fetch_array($sql);
       ?>
 
       <div id="conteudo-detalhe">
         <br>
-        <img src="images/produtos/<?php echo $dados["foto"]; ?> " width="400dx" height="400dx">
+        <img id="grande" src="images/produtos/<?php echo $dados["foto"]; ?> " width="400dx" height="400dx" border="0" style="border: 2px solid red;border-radius: 8px;">
         <br>
+        <br>
+        <?php
+        $txt = "select * from fotos where produtosid = '$_GET[id]'";
+        $sqlf = mysql_query($txt);
+        while ($foto = mysql_fetch_object($sqlf)) {
+          ?>
+        <a href="#" onclick="document.getElementById('grande').src='images/produtos/<?php echo $foto->foto; ?>'"><img src="images/produtos/<?php echo $foto->foto; ?>" width="70" border="0" style="border: 2px solid red;border-radius: 8px; margin-left: 10px;" /></a>
+        <?php } ?>
       </div>    
 
       <div id="conteudo-detalhe" >

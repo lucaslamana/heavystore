@@ -56,7 +56,7 @@
       <div id="conteudo-centro" align="center">
 
         <?php
-        $txt = "select * from produtos join fotos on fotos.produtosid = produtos.id
+        $txt = "select * from produtos join fotos on fotos.produtosid = produtos.id and fotos.principal=0
           order by produtos.id desc";
         $sql = mysql_query($txt);
 
