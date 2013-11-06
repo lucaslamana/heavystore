@@ -19,7 +19,7 @@ if($procura["tipo"]=="Bandeira"){
        valor = '$_POST[valor]', quantidade = '$_POST[quantidade]' where id = '$_GET[id]'";
   mysql_query($query);
 }else if($procura["tipo"]=="CD"){
-  $query = "update produtos set nome = '$_POST[nome]]', descricao = '$_POST[descricao]',
+  $query = "update produtos set nome = '$_POST[nome]', descricao = '$_POST[descricao]',
      valor = '$_POST[valor]', duracao = '$_POST[duracao]', quantidade = '$_POST[quantidade]',
        relacaomusicas = '$_POST[faixas]' where id = '$_GET[id]'";
   mysql_query($query);

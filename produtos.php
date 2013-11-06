@@ -1,12 +1,10 @@
-<?php ?>
+<?php include ("conexao.php"); ?>
 <html>
   <head>
     <link rel="stylesheet" href="padrao.css" type="text/css"/>
     <title>Produtos</title>
   </head>
   <body bgcolor="#000">
-
-    <?php include ("conexao.php"); ?>
 
     <div id="menu-topo"><ul id="menu-lista">
         <li><a href="historia.php">Hist&oacute;ria</a></li>
@@ -17,10 +15,10 @@
       </ul>
 
       <div id="menu-busca">
-        <form method="post" style="margin: 0px">
+        <form method="post" action="busca.php" style="margin: 0px">
           <table>
             <tr>
-              <td><input type="text" id="campo-curto" name="procurar"></td>
+              <td><input type="text" id="campo-curto" name="busca"></td>
               <td><input type="image" src="images/search.png" style="width: 18px; height: 18px; border-radius: 8px;" onclick="return alertar();" alt="Submit"></td>
             </tr>
           </table>  
@@ -56,7 +54,9 @@
       <div id="conteudo-centro" align="center">
 
         <?php
-        $txt = "select * from produtos join fotos on fotos.produtosid = produtos.id and fotos.principal=0
+        $txt = "select * from produtos
+          join fotos on fotos.produtosid = produtos.id
+            and fotos.principal = 0
           order by produtos.id desc";
         $sql = mysql_query($txt);
 
@@ -64,7 +64,7 @@
           ?>
 
           <div id="conteudo-box">
-            <table>
+            <table width="100%">
               <tr>
                 <td id="texto-titulo" style="color: #000;" align="center"><?php echo $dados["tipo"] ?></td>
               </tr>
@@ -77,8 +77,7 @@
               <tr>
                 <td align="center"><?php
                   $valor = $dados["valor"];
-                  echo "R$ " . number_format($valor, 2, ',', '');
-                  ?></td>
+                  echo "R$ " . number_format($valor, 2, ',', ''); ?></td>
               </tr>
               <tr>
                 <td align="center"><a href="#"><img src="images/botao_comprar.png" width="80" height="35"/></a></td>

@@ -142,7 +142,7 @@ if ($_SESSION["usuario"] != "admin") {
           </tr>
           <tr>
             <td valign="top">Faixas</td>
-            <td><textarea rows="8" cols="29" id="campo-texto" name="faixas"><?php echo nl2br($produto["relacaomusicas"]) ?></textarea></td>
+            <td><textarea rows="8" cols="29" id="campo-texto" name="faixas"><?php echo nl2br($produto["relacaomusicas"]); ?></textarea></td>
           </tr>
           <tr>
             <td><input type="submit" value="Atualizar" id="botao"></td>
