@@ -71,7 +71,10 @@ include ("conexao.php");
               <td align="center"><a href="detalhe-produto.php?id=<?php echo $produto["id"]; ?>"><img src="images/produtos/<?php echo $produto["foto"]; ?>" width="150dx" height="150dx"></a></td>
             </tr>
             <tr>
-              <td align="center"><a href="detalhe-produto.php?id=<?php echo $produto["id"]; ?>" id="no-link" style="color: #000;"><?php echo $produto["nome"] . " - " . $produto["descricao"]; ?></a></td>
+              <td align="center"><a href="detalhe-produto.php?id=<?php echo $produto["id"]; ?>" id="no-link" style="color: #000;"><?php
+                $descricao = $produto["nome"] . " - " . $produto["descricao"];
+                echo strlen($descricao) > 30 ? (substr($descricao, 0, 28)) . "..." : $descricao;
+                ?></a></td>
             </tr>
             <tr>
               <td align="center"><?php

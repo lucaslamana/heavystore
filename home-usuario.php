@@ -16,10 +16,10 @@
       </ul>
 
       <div id="menu-busca">
-        <form method="post" style="margin: 0px">
+        <form method="post" action="busca.php" style="margin: 0px">
           <table>
             <tr>
-              <td><input type="text" style="width: 150px; padding: 0px; border-radius: 8px;" name="procurar" value="Procurar"></td>
+              <td><input type="text" id="campo-curto" name="busca"></td>
               <td><input type="image" src="images/search.png" style="width: 18px; height: 18px; border-radius: 8px;" onclick="return alertar();" alt="Submit"></td>
             </tr>
           </table>  

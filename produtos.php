@@ -72,7 +72,10 @@
                 <td align="center"><a href="detalhe-produto.php?id=<?php echo $dados["id"]; ?>"><img src="images/produtos/<?php echo $dados["foto"]; ?>" width="150dx" height="150dx"></a></td>
               </tr>
               <tr>
-                <td align="center"><a href="detalhe-produto.php?id=<?php echo $dados["id"]; ?>" id="no-link" style="color: #000;"><?php echo $dados["nome"] . " - " . $dados["descricao"]; ?></a></td>
+                <td align="center"><a href="detalhe-produto.php?id=<?php echo $dados["id"]; ?>" id="no-link" style="color: #000;"><?php
+                $descricao = $dados["nome"] . " - " . $dados["descricao"];
+                echo strlen($descricao) > 30 ? (substr($descricao, 0, 28)) . "..." : $descricao;
+                ?></a></td>
               </tr>
               <tr>
                 <td align="center"><?php
