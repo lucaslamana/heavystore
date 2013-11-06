@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tempo de Geração: 04/11/2013 às 03:10
+-- Tempo de Geração: 06/11/2013 às 02:25
 -- Versão do servidor: 5.5.32
 -- Versão do PHP: 5.4.16
 
@@ -54,20 +54,24 @@ CREATE TABLE IF NOT EXISTS `fotos` (
   `idf` int(4) NOT NULL AUTO_INCREMENT,
   `foto` varchar(250) NOT NULL,
   `produtosid` int(4) NOT NULL,
+  `principal` tinyint(1) NOT NULL,
   PRIMARY KEY (`idf`),
   KEY `FKfotos458935` (`produtosid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Fazendo dump de dados para tabela `fotos`
 --
 
-INSERT INTO `fotos` (`idf`, `foto`, `produtosid`) VALUES
-(2, 'camiseta_ironmaiden_the trooper_1.jpg', 1),
-(4, 'camiseta_symphony_Iconoclas_1.jpg', 2),
-(5, 'cd_ironmaiden_seventhson1.jpg', 3),
-(6, 'camiseta_vanhalen_1984_1.jpg', 4),
-(8, 'cd_helloween_masteroftheRings.jpg', 5);
+INSERT INTO `fotos` (`idf`, `foto`, `produtosid`, `principal`) VALUES
+(2, 'camiseta_ironmaiden_the trooper_1.jpg', 1, 0),
+(4, 'camiseta_symphony_Iconoclas_1.jpg', 2, 0),
+(5, 'cd_ironmaiden_seventhson1.jpg', 3, 0),
+(6, 'camiseta_vanhalen_1984_1.jpg', 4, 0),
+(8, 'cd_helloween_masteroftheRings.jpg', 5, 0),
+(9, 'camiseta_ironmaiden_the trooper_2.jpg', 1, 1),
+(10, 'camiseta_symphony_Iconoclas_2.jpg', 2, 1),
+(11, 'camiseta_vanhalen_1984_2.jpg', 4, 1);
 
 -- --------------------------------------------------------
 
@@ -114,8 +118,8 @@ CREATE TABLE IF NOT EXISTS `produtos` (
 --
 
 INSERT INTO `produtos` (`id`, `nome`, `descricao`, `tipo`, `valor`, `quantidade`, `tamanho`, `cor`, `material`, `duracao`, `relacaomusicas`) VALUES
-(1, 'Iron Maiden', 'The Trooper', 'Camiseta', 50, 1, 'GG', 'Preta', '100% Algodão', NULL, NULL),
-(2, 'Symphony X', 'Iconoclast', 'Camiseta ', 55, 2, 'GG', 'Preta', '100% Algodão', NULL, NULL),
+(1, 'Iron Maiden', 'The Trooper', 'Camiseta', 50, 10, 'GG', 'Preta', '100% Algodão', NULL, NULL),
+(2, 'Symphony X', 'Iconoclast', 'Camiseta ', 55, 5, 'GG', 'Preta', '100% Algodão', NULL, NULL),
 (3, 'Iron Maiden', 'Seventh Son of a Seventh Son', 'CD', 35.5, 5, NULL, NULL, NULL, '00:44:00', '01 - Moonchild\r\n02 - Infinite Dreams\r\n03 - Can I Play with Madness\r\n04 - The Evil That Men Do\r\n05 - Seventh Son of a Seventh Son\r\n06 - The Prophecy\r\n07 - The Clairvoyant\r\n08 - Only the Good Die Young\r\n'),
 (4, 'Van Hallen', '1084', 'Camiseta', 25, 10, 'PP', 'Preta', '100% Algodão', NULL, NULL),
 (5, 'Helloween', 'Master of the Rings', 'CD', 34.9, 5, NULL, NULL, NULL, '00:00:00', '01 - Irritation\r\n02 - Sole Survivor\r\n03 - Where the Rain Grows\r\n04 - Why?\r\n05 - Mr. Ego\r\n06 - Perfect Gentleman\r\n07 - The Game Is On\r\n08 - Secret Alibi\r\n09 - Take Me Home\r\n10 - In the Middle of a Heartbeat\r\n11 - Still We Go');
