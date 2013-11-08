@@ -56,7 +56,6 @@
         <li><a href="historia.php">Hist&oacute;ria</a></li>
         <li><a href="produtos.php">Produtos</a></li>
         <li><a href="cadastro.php"><b>Cadastre-se</b></a></li>
-        <li><a href="#">Sobre</a></li>
         <li><a href="contato.php">Contato</a></li>
       </ul>
 
