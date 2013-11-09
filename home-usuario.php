@@ -59,6 +59,9 @@ include("conexao.php");
             <td><a href="home-usuario.php?pagina=info-local" id="no-link">Localiza&ccedil;&atilde;o</a></td>
           </tr>
           <tr>
+            <td><a href="home-usuario.php?pagina=mudar-senha" id="no-link">Mudar a senha</a></td>
+          </tr>
+          <tr>
             <td><?php echo "<br/>"; ?></td>
           </tr>
           <tr>

@@ -12,11 +12,10 @@ TODO
 [X] LL Gerenciamento de usuários na parte administrativa
 
 
-[] LB Página Carrinho-Compra
-[]    Página index
-[] LL Página de cadastro de endereço
-[] LL Página principal do usuário
-[]    Página de Sobre
-[] LB Adicionar imagens página historia
-[]    Filtragem de produtos
-[]    Radion Box tela update foto (selecionar foto principal)
+[]  LB Página Carrinho-Compra
+[]     Página index
+[X] LL Página de cadastro de endereço
+[X] LL Página principal do usuário
+[]  LB Adicionar imagens página historia
+[]     Filtragem de produtos
+[]     Radion Box tela update foto (selecionar foto principal)
