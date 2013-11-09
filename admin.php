@@ -42,13 +42,13 @@
     </div>
     
     <?php if(@$_GET["erro"]==1) {?>
-    <div id="menu-topo" align="right">
+    <div id="erro" align="right">
       <p id="texto-erro">Usu&aacute;rio inexistente!</p>
     </div>
     <?php } ?>
     
     <?php if(@$_GET["erro"]==2) {?>
-    <div id="menu-topo" align="right">
+    <div id="erro" align="right">
       <p id="texto-erro">Senha incorreta!</p>
     </div>
     <?php } ?>

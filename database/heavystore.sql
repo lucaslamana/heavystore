@@ -127,7 +127,7 @@ INSERT INTO `produtos` (`id`, `nome`, `descricao`, `tipo`, `valor`, `quantidade`
 (4, 'Van Hallen', '1084', 'Camiseta', 30, 10, 'PP', 'Preta', '100% Algodão', NULL, NULL),
 (5, 'Helloween', 'Master of the Rings', 'CD', 34.9, 5, NULL, NULL, NULL, '00:00:00', '01 - Irritation\r\n02 - Sole Survivor\r\n03 - Where the Rain Grows\r\n04 - Why?\r\n05 - Mr. Ego\r\n06 - Perfect Gentleman\r\n07 - The Game Is On\r\n08 - Secret Alibi\r\n09 - Take Me Home\r\n10 - In the Middle of a Heartbeat\r\n11 - Still We Go'),
 (6, 'ACDC', 'Black Ice', 'Bandeira', 49.9, 2, NULL, 'Preta', '100% Polyester', NULL, NULL),
-(7, ' Black Sabbath', 'Paranoid', 'DVD', 30, 3, NULL, NULL, NULL, '00:00:00', '01 - Early Sabbath\r\n02 - War Pigs\r\n03 - Iron Man\r\n04 - Planet Caravan\r\n05 - Electric Funeral\r\n06 - Hand Of Doom\r\n07 - Fairies Wear Boots\r\n08 - Paranoid');
+(7, 'Black Sabbath', 'Paranoid', 'DVD', 30, 3, NULL, NULL, NULL, '00:00:00', '01 - Early Sabbath\r\n02 - War Pigs\r\n03 - Iron Man\r\n04 - Planet Caravan\r\n05 - Electric Funeral\r\n06 - Hand Of Doom\r\n07 - Fairies Wear Boots\r\n08 - Paranoid');
 
 -- --------------------------------------------------------
 
@@ -159,7 +159,6 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `usuario`, `senha`, `nascimento`, `sexo`, `fone`, `cidade`, `uf`, `logradouro`, `bairro`, `cep`) VALUES
 (1, 'Lucas Eduardo Botechia', 'lucasedub@gmail.com', 'lucas', 'botechia', '1981-09-11', 'M', 0, '', '', '', '', '');
-
 --
 -- Restrições para dumps de tabelas
 --

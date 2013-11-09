@@ -36,6 +36,7 @@
   margin: 0px;
   padding: 0px;
 }
+
 #menu-topo{
   width: 100%;
   height: auto;
@@ -44,6 +45,19 @@
   background-color: #000;
   position: relative;
   float: left;
+  border: #fff thin solid;
+}
+
+
+#erro{
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  background-color: #000;
+  position: relative;
+  float: left;
+  color: #fff;
   border: #fff thin solid;
 }
 
@@ -209,6 +223,7 @@
   text-align: center;
   padding: 0;
   margin: 2px;
+  margin-left: 0px;
 }
 
 #botao:hover{
@@ -256,6 +271,7 @@
   border-radius: 8px;
   font-family: Calibri;
   font-size: 18px;
+  margin: 4px;
   padding: 0;
   border-radius: 8px;
 }
