@@ -11,8 +11,8 @@ include("conexao.php");
   <body bgcolor="#000">
 
     <div id="menu-topo"><ul id="menu-lista">
-        <li><a href="#">Hist&oacute;ria</a></li>
-        <li><a href="#">Produtos</a></li>
+        <li><a href="historia.php">Hist&oacute;ria</a></li>
+        <li><a href="produtos.php">Produtos</a></li>
         <li><a href="cadastro.php">Cadastre-se</a></li>
         <li><a href="contato.php">Contato</a></li>
       </ul>
@@ -236,8 +236,44 @@ include("conexao.php");
               </tr>
             </table>
           </form>
-        <?php } ?>
+        <?php } else if($_GET["pagina"]=="mudar-senha"){ ?>
+        <form method="post" action="atualiza-senha.php?id=<?php echo $usuario["id"]; ?>">
+        <table id="texto" cellspacing="5">
+          <?php if(@$_GET["erro"]==3){ ?>
+          <tr>
+            <td id="texto-erro" colspan="2">Senhas continuam iguais!</td>
+          </t<>
+          <?php } ?>
+          <tr>
+            <td>Senha atual</td>
+            <td><input type="password" id="campo-curto" name="senha"></td>
+          </tr>
+          <?php if(@$_GET["erro"]==1){ ?>
+          <tr>
+            <td id="texto-erro" colspan="2">Senha n&atilde;o confere!</td>
+          </tr>
+          <?php } ?>
+          <tr>
+            <td>Nova senha</td>
+            <td><input type="password" id="campo-curto" name="novasenha"></td>
+          </tr>
+          <tr>
+            <td>Confirma&ccedil;&atilde;o</td>
+            <td><input type="password" id="campo-curto" name="confirmasenha"></td>
+          </tr>
+          <?php if(@$_GET["erro"]==2){ ?>
+          <tr>
+            <td id="texto-erro" colspan="2">Senhas n&atilde;o conferem</td>
+          </tr>
+          <?php } ?>
+          <tr>
+            <td><input type="submit" id="botao" value="Atualizar"></td>
+          </tr>
         </table>
+        </form>
+        <?php } else if($_GET["pagina"] == "resp-senha"){ ?>
+          <p id="texto-titulo">Senha atualizada com sucesso!</p>
+        <?php } ?>
       </div>
     </div>
 

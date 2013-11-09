@@ -135,12 +135,12 @@
 }
 
 #conteudo-fotos{
-  width: 100%;
+  width: auto;
   height: auto;
   float: left;
   position: relative;
   margin-top: 10px;
-  border: #fff thin solid;
+  margin-right: 2px;
 }
 
 #rodape{

@@ -5,6 +5,7 @@ include("verificacao.php");
 <html>
   <head>
     <link rel="stylesheet" href="padrao.css" type="text/css">
+    <title>Incluir foto</title>
   </head>
   <body>
   <html>
@@ -43,13 +44,20 @@ include("verificacao.php");
             <td><?php echo $_GET["nome"]; ?></td>
           </tr>
           <tr>          
-            <td colspan="3"><input type="file" style="width: 300px;" name="foto"></td>
+            <td colspan="2"><input type="file" style="width: 300px;" name="foto"></td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="principal" value="0">Principal</td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="principal" value="1">Outra</td>
+          </tr>
+          <tr>
             <td><input type="submit" value="Enviar" id="botao"></td>
           </tr>
         </table>
       </form>
       
-      <div id="conteudo-fotos">
       <?php
       
       include("conexao.php");
@@ -58,9 +66,11 @@ include("verificacao.php");
       
       while ($fotos = mysql_fetch_array($sql)) {
       ?>
+      <div id="conteudo-fotos">
         <img src="images/produtos/<?php echo $fotos["foto"]; ?>" id="thumbnail"/>
-      <?php } ?>
+        <a href="excluir-imagem.php?id=<?php echo $fotos["idf"]; ?>&produto=<?php echo $_GET["nome"]; ?>&idproduto=<?php echo $_GET["id"]; ?>"><img src="images/delete.png"/></a>
       </div>
+     <?php } ?>
     </div>
 
   </body>
