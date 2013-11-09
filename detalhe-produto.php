@@ -32,32 +32,35 @@
       </div>
       <div id="cabecalho-login">
         <table id="texto">
-          <?php 
+          <?php
           session_start();
-          if(@$_SESSION["nome"]!=""){ ?>
-          <tr>
-            <td  align="right"> <?php $first_name = explode(" ", $_SESSION["nome"]);
-            echo "Ola " . $first_name[0]; ?> </td>
-          </tr>
-          <tr>
-            <td algin=""><a href="sair.php" id="no-link">Clique aqui </a> para sair</td>
-          </tr>
-          <?php }else{
-          ?>
-          <form method="post" action="validacao-usuario.php">
+          if (@$_SESSION["nome"] != "") {
+            ?>
             <tr>
-              <td align="right">Usu&aacute;rio</td>
-              <td><input type="text"  id="campo-curto" style="width: 150px;" name="usuario"></td>
+              <td  align="right"> <?php
+                $first_name = explode(" ", $_SESSION["nome"]);
+                echo "Ola " . $first_name[0];
+                ?> </td>
             </tr>
             <tr>
-              <td align="right">Senha</td>
-              <td><input type="password" id="campo-curto" style="width: 150px;" name="senha"></td>
+              <td algin=""><a href="sair.php" id="no-link">Clique aqui </a> para sair</td>
             </tr>
-            <tr>
-              <td colspan="2" align="right"><input type="submit" value="Log in" id="botao"></td>
-            </tr>
-          </form>
-          <?php } ?>
+          <?php } else {
+            ?>
+            <form method="post" action="validacao-usuario.php">
+              <tr>
+                <td align="right">Usu&aacute;rio</td>
+                <td><input type="text"  id="campo-curto" style="width: 150px;" name="usuario"></td>
+              </tr>
+              <tr>
+                <td align="right">Senha</td>
+                <td><input type="password" id="campo-curto" style="width: 150px;" name="senha"></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="right"><input type="submit" value="Log in" id="botao"></td>
+              </tr>
+            </form>
+<?php } ?>
         </table>
       </div>
     </div>
@@ -68,7 +71,7 @@
       $sql = mysql_query($txt);
       $dados = mysql_fetch_array($sql);
       ?>
-      <?php if (@$dados[tipo] == "CD") { ?>
+<?php if (@$dados[tipo] == "CD") { ?>
 
         <div id="conteudo-detalhe">
           <br/>
@@ -80,7 +83,7 @@
           while ($foto = mysql_fetch_object($sqlf)) {
             ?>
             <a href="#" onclick="document.getElementById('grande').src = 'images/produtos/<?php echo $foto->foto; ?>'"><img src="images/produtos/<?php echo $foto->foto; ?>" width="70" border="0" style="border: 2px solid red;border-radius: 8px; margin-left: 10px;" /></a>
-          <?php } ?>
+  <?php } ?>
         </div>    
 
         <div id="conteudo-detalhe" >
@@ -103,12 +106,13 @@
               echo "Valor: " . " R$ " . number_format($valor, 2, ',', '');
               ?></h2>
             <br/>
-            <center><a href="#"><img src="images/botao_comprar.png" width="100" height="50"/></a></center>
+            <center><a href="carrinho.php?id= <?php echo $dados["id"]; ?>"><img src="images/botao_comprar.png" width="100" height="50"/></a></center>
+
             <br/>
           </form>
         </div>
 
-      <?php } else if (@$dados[tipo] == "DVD") { ?>
+<?php } else if (@$dados[tipo] == "DVD") { ?>
 
         <div id="conteudo-detalhe">
           <br/>
@@ -120,7 +124,7 @@
           while ($foto = mysql_fetch_object($sqlf)) {
             ?>
             <a href="#" onclick="document.getElementById('grande').src = 'images/produtos/<?php echo $foto->foto; ?>'"><img src="images/produtos/<?php echo $foto->foto; ?>" width="70" border="0" style="border: 2px solid red;border-radius: 8px; margin-left: 10px;" /></a>
-          <?php } ?>
+  <?php } ?>
         </div>    
 
         <div id="conteudo-detalhe" >
@@ -143,12 +147,12 @@
               echo "Valor: " . " R$ " . number_format($valor, 2, ',', '');
               ?></h2>
             <br/>
-            <center><a href="#"><img src="images/botao_comprar.png" width="100" height="50"/></a></center>
+            <center><a href="carrinho.php?id= <?php echo $dados["id"]; ?>"><img src="images/botao_comprar.png" width="100" height="50"/></a></center>
             <br/>
           </form>
         </div>      
 
-      <?php } else if (@$dados[tipo] == "Camiseta") { ?>
+<?php } else if (@$dados[tipo] == "Camiseta") { ?>
 
         <div id="conteudo-detalhe">
           <br/>
@@ -160,7 +164,7 @@
           while ($foto = mysql_fetch_object($sqlf)) {
             ?>
             <a href="#" onclick="document.getElementById('grande').src = 'images/produtos/<?php echo $foto->foto; ?>'"><img src="images/produtos/<?php echo $foto->foto; ?>" width="70" border="0" style="border: 2px solid red;border-radius: 8px; margin-left: 10px;" /></a>
-          <?php } ?>
+  <?php } ?>
         </div>
 
         <div id="conteudo-detalhe" >
@@ -171,23 +175,23 @@
             <br/><br/>
             <?php echo $dados["descricao"]; ?>
             <br/><br/>
-            <?php echo "Cor: ".$dados["cor"] ?>
+            <?php echo "Cor: " . $dados["cor"] ?>
             <br/>
-            <?php echo "Material: ".$dados["material"] ?>         
+            <?php echo "Material: " . $dados["material"] ?>         
             <br/>
-            <?php echo "Tamanho: ".$dados["tamanho"] ?>
+  <?php echo "Tamanho: " . $dados["tamanho"] ?>
             <br/>
             <h2><?php
               $valor = $dados["valor"];
               echo "Valor: " . " R$ " . number_format($valor, 2, ',', '');
               ?></h2>
             <br/>
-            <center><a href="#"><img src="images/botao_comprar.png" width="100" height="50"/></a></center>
+            <center><a href="carrinho.php?id= <?php echo $dados["id"]; ?>"><img src="images/botao_comprar.png" width="100" height="50"/></a></center>
             <br/>
           </form>
         </div>
 
-      <?php } else if (@$dados[tipo] == "Bandeira") { ?>
+<?php } else if (@$dados[tipo] == "Bandeira") { ?>
 
         <div id="conteudo-detalhe">
           <br/>
@@ -199,7 +203,7 @@
           while ($foto = mysql_fetch_object($sqlf)) {
             ?>
             <a href="#" onclick="document.getElementById('grande').src = 'images/produtos/<?php echo $foto->foto; ?>'"><img src="images/produtos/<?php echo $foto->foto; ?>" width="70" border="0" style="border: 2px solid red;border-radius: 8px; margin-left: 10px;" /></a>
-          <?php } ?>
+  <?php } ?>
         </div>
 
         <div id="conteudo-detalhe" >
@@ -213,18 +217,18 @@
             <br/>
             <?php echo $dados["material"] ?>         
             <br/>
-            <?php echo $dados["tamanho"] ?>
+  <?php echo $dados["tamanho"] ?>
             <br/>
             <h2><?php
               $valor = $dados["valor"];
               echo "Valor: " . " R$ " . number_format($valor, 2, ',', '');
               ?></h2>
             <br/>
-            <center><a href="#"><img src="images/botao_comprar.png" width="100" height="50"/></a></center>
+            <center><a href="carrinho.php?id= <?php echo $dados["id"]; ?>"><img src="images/botao_comprar.png" width="100" height="50"/></a></center>
             <br/>
           </form>
         </div>
-      <?php } ?>
+<?php } ?>
     </div>
   </body>
 </html>
