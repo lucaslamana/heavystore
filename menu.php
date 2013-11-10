@@ -1,6 +1,6 @@
 <div id="menu-topo"><ul id="menu-lista">
     <li><a href="historia.php">Hist&oacute;ria</a></li>
-    <li><a href="produtos.php">Produtos</a></li>
+    <li><a href="produtos.php?p=todos">Produtos</a></li>
     <li><a href="cadastro.php">Cadastre-se</a></li>
     <li><a href="contato.php">Contato</a></li>
   </ul>

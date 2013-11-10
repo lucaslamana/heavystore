@@ -4,6 +4,7 @@
     <link href="padrao.css" rel="stylesheet" type="text/css">
   </head>
   <body bgcolor="#000">
+    
     <?php include("menu.php"); ?>
 
     <?php if (@$_GET["erro"] == 1) { ?>
