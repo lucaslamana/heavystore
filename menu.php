@@ -24,8 +24,8 @@
   <div id="cabecalho-login">
 
     <table id="texto">
-      <div style="float:right; position:relative; margin-top: 65px; margin-left: 20px;"><a href="vercarrinho.php" style="text-decoration:none; color: #fff">
-        <img src="images/carrinho.png" width="46" height="36" /><?php echo str_pad(@$_SESSION["tcarrinho"], 2, "0", STR_PAD_LEFT); ?></a></div>
+      <div style="float:right; position:relative; margin-top: 65px; margin-left: 20px;"><a href="vercarrinho.php" style="text-decoration:none; color: red">
+          <img src="images/carrinho.png" width="46" height="36" /><?php echo str_pad(@$_SESSION["tcarrinho"], 2, "0", STR_PAD_LEFT); ?></a></div>
       <?php
       @session_start();
       if (@$_SESSION["nome"] != "") {

@@ -5,18 +5,20 @@
   </head>
 
   <body bgcolor="#000">
-<?php include ("menu.php"); ?>       
+    <?php
+    session_start();
+    include ("menu.php");
+    ?>       
     <div id="conteudo">
 
       <form>
         <table id="texto" cellspacing="5">
           <tr>
             <td>Nome</td>
-            <?php             
-            if($_SESSION["usuario"]!= "") { ?>
-            <td><?php echo $_SESSION["nome"]; ?></td>
-            <?php  }else{ ?>
-            <td><input type="text" id="campo-longo"></td>
+            <?php if ($_SESSION["usuario"] != "") { ?>
+              <td><?php echo $_SESSION["nome"]; ?></td>
+            <?php } else { ?>
+              <td><input type="text" id="campo-longo"></td>
             <?php } ?>
           </tr>
           <tr>

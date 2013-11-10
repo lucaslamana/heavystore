@@ -4,8 +4,11 @@
     <title>Hist&oacute;ria</title>
   </head>
   <body bgcolor="#000000">
-    <?php include ("conexao.php"); ?>
-    <?php include("menu.php"); ?>
+    <?php
+    include ("conexao.php");
+    session_start();
+    include("menu.php");
+    ?>
 
 
     <div id="conteudo" >

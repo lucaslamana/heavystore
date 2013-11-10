@@ -1,11 +1,14 @@
-<?php include ("conexao.php"); ?>
+<?php include ("conexao.php");
+session_start();
+?>
 <html>
   <head>
     <link rel="stylesheet" href="padrao.css" type="text/css"/>
     <title>Produtos</title>
   </head>
   <body bgcolor="#000">
-    <?php include ("./menu.php"); ?>
+
+<?php include ("menu.php"); ?>
 
     <div id="conteudo">
       <div id="conteudo-esquerdo">

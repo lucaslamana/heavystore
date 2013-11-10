@@ -1,6 +1,6 @@
 <?php
 session_start();
-$cesta = $_SESSION["cesta"];
+@$cesta = $_SESSION["cesta"];
 $tam = count($cesta);
 ?>
 
@@ -43,9 +43,9 @@ $tam = count($cesta);
         <tr><td colspan="3" align="right" valign="middle" bgcolor="#CCCCCC" style="font-size: 15px; font-weight: bold;">Total: </td><td align="center" bgcolor="#CCCCCC" style="font-size: 15px; font-weight: bold;">R$ <?php echo number_format($total, 2, ",", "."); ?></td></tr>
       </table>
 
-      <div  style="float: left; position:relative; margin-top: 10px; width: 95%; text-align:right;">
-        <a href="produtos.php"><img src="images/bt-continuar.jpg" width="159" height="33" border="0" /></a>
-        &nbsp;&nbsp;&nbsp;<img src="images/bt-finalizar.jpg" width="159" height="33" />
+      <div  style="float: left; position:relative; margin-top: 15px; width: 95%; text-align:right;">
+        <a href="produtos.php"><img src="images/botao_continuar.png" width="159" height="45" border="0" /></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;<img src="images/botao_finalizar.png" width="159" height="45" />
       </div>
     </div>
   </body>
