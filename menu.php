@@ -24,8 +24,6 @@
   <div id="cabecalho-login">
 
     <table id="texto">
-      <div style="float:right; position:relative; margin-top: 65px; margin-left: 20px;"><a href="vercarrinho.php" style="text-decoration:none; color: red">
-          <img src="images/carrinho.png" width="46" height="36" /><?php echo str_pad(@$_SESSION["tcarrinho"], 2, "0", STR_PAD_LEFT); ?></a></div>
       <?php
       @session_start();
       if (@$_SESSION["nome"] != "") {
@@ -33,11 +31,15 @@
         <tr>
           <td  align="right"> <?php
             $first_name = explode(" ", $_SESSION["nome"]);
-            echo "Ola " . $first_name[0];
+            echo "Ola <a href='home-usuario.php' id='no-link'>" . $first_name[0] . "</a>";
             ?> </td>
         </tr>
         <tr>
           <td algin=""><a href="sair.php" id="no-link">Clique aqui </a> para sair</td>
+        </tr>
+        <tr>
+          <td align="right"><a href="vercarrinho.php" style="text-decoration:none; color: red">
+          <img src="images/carrinho.png" width="46" height="36" /><?php echo str_pad(@$_SESSION["tcarrinho"], 2, "0", STR_PAD_LEFT); ?></a></td>
         </tr>
       <?php } else {
         ?>

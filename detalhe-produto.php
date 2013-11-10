@@ -8,8 +8,10 @@ session_start();
   </head>
   <body bgcolor="#000">
 
-    <?php include ("conexao.php"); ?>
-    <?php include ("./menu.php"); ?>
+    <?php
+    include ("conexao.php");
+    include ("menu.php");
+    ?>
 
     <div id="conteudo">
       <?php
