@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tempo de Geração: 08/11/2013 às 03:02
+-- Tempo de Geração: 13/11/2013 às 01:42
 -- Versão do servidor: 5.5.32
 -- Versão do PHP: 5.4.16
 
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `fotos` (
   `principal` tinyint(1) NOT NULL,
   PRIMARY KEY (`idf`),
   KEY `FKfotos458935` (`produtosid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
 
 --
 -- Fazendo dump de dados para tabela `fotos`
@@ -74,7 +74,13 @@ INSERT INTO `fotos` (`idf`, `foto`, `produtosid`, `principal`) VALUES
 (11, 'camiseta_vanhalen_1984_2.jpg', 4, 1),
 (12, 'cd_ironmaiden_seventhson2.jpg', 3, 1),
 (13, 'bandeira_acdc.jpg', 6, 0),
-(14, 'dvd_blacksabbath_paranoid.jpg', 7, 0);
+(14, 'dvd_blacksabbath_paranoid.jpg', 7, 0),
+(15, 'camiseta_manowar_the_lord_of_steel1.jpg', 8, 0),
+(16, 'camiseta_manowar_the_lord_of_steel2.jpg', 8, 1),
+(17, 'camiseta_angra_aqua1.jpg', 9, 0),
+(18, 'camiseta_angra_aqua2.jpg', 9, 1),
+(19, 'dvd_judas_priest_epitaph.jpg', 10, 0),
+(20, 'cd_primal_fear_unbreakable.jpg', 11, 0);
 
 -- --------------------------------------------------------
 
@@ -114,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `produtos` (
   `duracao` time DEFAULT NULL,
   `relacaomusicas` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Fazendo dump de dados para tabela `produtos`
@@ -127,7 +133,11 @@ INSERT INTO `produtos` (`id`, `nome`, `descricao`, `tipo`, `valor`, `quantidade`
 (4, 'Van Hallen', '1084', 'Camiseta', 30, 10, 'PP', 'Preta', '100% Algodão', NULL, NULL),
 (5, 'Helloween', 'Master of the Rings', 'CD', 34.9, 5, NULL, NULL, NULL, '00:00:00', '01 - Irritation\r\n02 - Sole Survivor\r\n03 - Where the Rain Grows\r\n04 - Why?\r\n05 - Mr. Ego\r\n06 - Perfect Gentleman\r\n07 - The Game Is On\r\n08 - Secret Alibi\r\n09 - Take Me Home\r\n10 - In the Middle of a Heartbeat\r\n11 - Still We Go'),
 (6, 'ACDC', 'Black Ice', 'Bandeira', 49.9, 2, NULL, 'Preta', '100% Polyester', NULL, NULL),
-(7, 'Black Sabbath', 'Paranoid', 'DVD', 30, 3, NULL, NULL, NULL, '00:00:00', '01 - Early Sabbath\r\n02 - War Pigs\r\n03 - Iron Man\r\n04 - Planet Caravan\r\n05 - Electric Funeral\r\n06 - Hand Of Doom\r\n07 - Fairies Wear Boots\r\n08 - Paranoid');
+(7, ' Black Sabbath', 'Paranoid', 'DVD', 30, 3, NULL, NULL, NULL, '00:00:00', '01 - Early Sabbath\r\n02 - War Pigs\r\n03 - Iron Man\r\n04 - Planet Caravan\r\n05 - Electric Funeral\r\n06 - Hand Of Doom\r\n07 - Fairies Wear Boots\r\n08 - Paranoid'),
+(8, 'Manowar', 'The Lord of Steel', 'Camiseta', 35.5, 5, 'PP', 'Preta', '100% Algodão', NULL, NULL),
+(9, 'Angra', 'Aqua', 'Camiseta', 38.9, 5, 'PP', 'Preta', '100% Algodão', NULL, NULL),
+(10, 'Judas Priest', 'Epitaph', 'DVD', 35.9, 2, NULL, NULL, NULL, NULL, '01. Battle Hymn\r\n02. Rapid Fire\r\n03. Metal Gods\r\n04. Heading Out To The Highway\r\n05. Judas Rising\r\n06. Starbreaker\r\n07. Victim Of Changes\r\n08. Never Satisfied\r\n09. Diamonds And Rust\r\n10. Prophecy\r\n11. Night Crawler\r\n12. Turbo Lover\r\n13. Beyond The Realms Of Death\r\n14. The Sentinel\r\n15. Blood Red Skies\r\n16. The Green Manalishi (With The Two Pronged Crown)\r\n17. Breaking The Law\r\n18. Painkiller\r\n19. The Hellion\r\n20. Electric Eye\r\n21. Hell Bent For Leather\r\n22. You''ve Got Another Thing Comin''\r\n23. Living After Midnight'),
+(11, 'Primal Fear', 'Unbreakable', 'CD', 25.5, 10, NULL, NULL, NULL, NULL, '01. Unbreakable (Parte 1)\r\n02. Strike\r\n03. Give ''Em Hell\r\n04. Bad Guys Wear Black\r\n05. And There Was Silence\r\n06. Metal Nation\r\n07. Where Angels Die\r\n08. Unbreakable (Parte 2)\r\n09. Marching Again\r\n10. Born Again\r\n11. Blaze Of Glory\r\n12. Conviction\r\n13. Night Of The Jumps\r\n14. Bad Guys Wear Black');
 
 -- --------------------------------------------------------
 
@@ -158,7 +168,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `usuario`, `senha`, `nascimento`, `sexo`, `fone`, `cidade`, `uf`, `logradouro`, `bairro`, `cep`) VALUES
-(1, 'Lucas Eduardo Botechia', 'lucasedub@gmail.com', 'lucas', 'botechia', '1981-09-11', 'M', 0, '', '', '', '', '');
+(1, 'Lucas Eduardo Botechia', 'lucasedub@gmail.com', 'lucas', '123', '1981-09-11', 'M', 0, '', '', '', '', '');
+
 --
 -- Restrições para dumps de tabelas
 --
