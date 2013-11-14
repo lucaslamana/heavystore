@@ -52,7 +52,7 @@
 #erro{
   width: 100%;
   height: auto;
-  margin: 0px;
+  margin-top: 1px;
   padding: 0px;
   background-color: #000;
   position: relative;

@@ -103,6 +103,11 @@
             <td>Usuario</td>
             <td><input type="text" id="campo-curto" name="usuario"></td>
           </tr>
+          <?php if(@$_GET["erro"]==1){ ?>
+          <tr>
+            <td id="texto-erro" colspan="2">Este usu&aacute;rio j&aacute; existe!</td>
+          </tr>
+          <?php } ?>
           <tr>
             <td>Senha</td>
             <td><input type="password" id="campo-curto" name="senha"></td>

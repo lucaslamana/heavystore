@@ -1,5 +1,5 @@
 <?php
-include("verificacao.php");
+include("verificacao-admin.php");
 ?>
 
 <html>
@@ -20,7 +20,7 @@ include("verificacao.php");
         <div id="cabecalho-login" align="right">
           <table id="texto">
             <tr>
-              <td  align="right"> <?php echo "Ola " . $_SESSION["nome"] ?> </td>
+              <td  align="right"> <?php echo "Ola " . $_SESSION["anome"] ?> </td>
             </tr>
             <tr>
               <td><a href="sair.php" id="no-link">Clique aqui </a> para sair</td>
@@ -34,6 +34,7 @@ include("verificacao.php");
       <ul id="menu-lista">
         <li><a href="admin-produtos.php"><b>Produtos</b></a></li>
         <li><a href="admin-usuarios.php">Usu&aacute;rios</a></li>
+        <li><a href="admin-historia.php">Hist&oacute;ria</a></li>
       </ul>
     </div>
     <div id="conteudo">
@@ -48,9 +49,6 @@ include("verificacao.php");
           </tr>
           <tr>
             <td><input type="radio" name="principal" value="0">Principal</td>
-          </tr>
-          <tr>
-            <td><input type="radio" name="principal" value="1">Outra</td>
           </tr>
           <tr>
             <td><input type="submit" value="Enviar" id="botao"></td>

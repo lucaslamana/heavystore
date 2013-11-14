@@ -1,8 +1,5 @@
 <?php
-include("verificacao.php");
-if ($_SESSION["usuario"] != "admin") {
-  header("location: admin.php");
-}
+include("verificacao-admin.php");
 ?>
 
 <html>
@@ -18,7 +15,7 @@ if ($_SESSION["usuario"] != "admin") {
       <div id="cabecalho-login" align="right" colspan="3">
         <table id="texto">
           <tr>
-            <td  align="right"> <?php echo "Ola " . $_SESSION["nome"] ?> </td>
+            <td  align="right"> <?php echo "Ola " . $_SESSION["anome"] ?> </td>
           </tr>
           <tr>
             <td><a href="sair.php" id="no-link">Clique aqui </a> para sair</td>

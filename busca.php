@@ -16,7 +16,8 @@ include ("conexao.php");
       $query = "select * from produtos
         join fotos on fotos.produtosid = produtos.id
           and fotos.principal = 0
-        where nome like '%$_POST[busca]%'";
+        where nome like '%$_POST[busca]%'
+          or tipo like'%$_POST[busca]%'";
       $sql = mysql_query($query);
 
       if (mysql_num_rows($sql) == 0) {

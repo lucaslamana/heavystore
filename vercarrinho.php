@@ -14,7 +14,7 @@ $tam = count($cesta);
     <?php include("conexao.php"); ?>    
     <?php include("menu.php"); ?>
     <div id="conteudo">
-      <table align="center" width="95%" border="0" cellspacing="3" cellpadding="3" style="background-color: white">
+      <table align="center" width="100%" border="0" cellspacing="3" cellpadding="3" style="background-color: white" id="texto">
         <tr>
           <td align="center" bgcolor="#333333" style=" color: #fff; font-weight: bold;">Produto</td>
           <td align="center" bgcolor="#333333" style=" color: #fff; font-weight: bold;">Qtde</td>

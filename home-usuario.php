@@ -149,6 +149,11 @@ include("conexao.php");
                 <td>Telefone</td>
                 <td><input type="text" id="campo-curto" name="fone"></td>
               </tr>
+              <?php if(@$_GET["invalido"] == 1){ ?>
+              <tr>
+                <td id="texto-erro" colspan="2">Formato: XX XXXXX-XXXX</td>
+              </tr>
+              <?php } ?>
               <tr>
                 <td>Logradouro</td>
                 <td><input type="text" id="campo-longo" name="logradouro"></td>
@@ -161,6 +166,11 @@ include("conexao.php");
                 <td>CEP</td>
                 <td><input type="text" id="campo-curto" name="cep"></td>
               </tr>
+              <?php if(@$_GET["invalido"] == 2){ ?>
+              <tr>
+                <td id="texto-erro" colspan="2">Formato: XX.XXX-XXX</td>
+              </tr>
+              <?php } ?>
               <tr>
                 <td>Cidade</td>
                 <td><input type="text" id="campo-curto" name="cidade"></td>

@@ -1,9 +1,6 @@
 <?php
 include("conexao.php");
-include("verificacao.php");
-if ($_SESSION["usuario"] != "admin") {
-  header("location: admin.php");
-}
+include("verificacao-admin.php");
 ?>
 
 <html>
@@ -19,7 +16,7 @@ if ($_SESSION["usuario"] != "admin") {
       <div id="cabecalho-login" align="right">
         <table id="texto">
           <tr>
-            <td  align="right"> <?php echo "Ola " . $_SESSION["nome"] ?> </td>
+            <td  align="right"> <?php echo "Ola " . $_SESSION["anome"] ?> </td>
           </tr>
           <tr>
             <td><a href="sair.php" id="no-link">Clique aqui </a> para sair</td>
@@ -33,6 +30,7 @@ if ($_SESSION["usuario"] != "admin") {
     <ul id="menu-lista">
       <li><a href="admin-produtos.php"><b>Produtos</b></a></li>
       <li><a href="admin-usuarios.php">Usu&aacute;rios</a></li>
+      <li><a href="admin-historia.php">Hist&oacute;ria</a></li>
     </ul>
   </div>
 
@@ -156,7 +154,30 @@ if ($_SESSION["usuario"] != "admin") {
           <tr>
             <td>Nome: </td>
             <td><input type="text" id="campo-longo" name="nome" value="<?php echo $produto["nome"]; ?>"</td>
+          </tr><tr>
+            <td valign="top">Descri&ccedil;&atilde;o</td>
+            <td><textarea rows="5" cols="29" id="campo-texto" name="descricao"><?php echo $produto["descricao"]; ?></textarea></td>
           </tr>
+          <tr>
+            <td>Valor</td>
+            <td><input type="text" id="campo-mais-curto" name="valor" value="<?php echo $produto["valor"]; ?>">
+          </tr>
+          <tr>
+            <td>Dura&ccedil;&atilde;o</td>
+            <td><input type="time" id="campo-mais-curto" name="duracao" value="<?php echo $produto["duracao"]; ?>">
+          </tr>
+          <tr>
+            <td>Quantidade</td>
+            <td><input type="number" id="campo-mais-curto" name="quantidade" value="<?php echo $produto["quantidade"]; ?>">
+          </tr>
+          <tr>
+            <td valign="top">Faixas</td>
+            <td><textarea rows="8" cols="29" id="campo-texto" name="faixas"><?php echo $produto["relacaomusicas"]; ?></textarea></td>
+          </tr>
+          <tr>
+            <td><input type="submit" value="Atualizar" id="botao"></td>
+          </tr>
+        </form>
         <?php } ?>
     </table>
   </div>

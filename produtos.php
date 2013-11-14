@@ -28,6 +28,9 @@ session_start();
           <tr>
             <td><a href="produtos.php?p=dvds" id="no-link">DVDs</a></td>
           </tr>
+          <tr>
+            <td><a href="produtos.php?p=todos" id="no-link">Todos</a></td>
+          </tr>
         </table>
       </div>
       <div id="conteudo-centro" align="center">

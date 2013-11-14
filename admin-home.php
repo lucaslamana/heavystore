@@ -1,8 +1,5 @@
 <?php
-include("verificacao.php");
-if($_SESSION["usuario"]!="admin"){
-  header("location: admin.php");
-}
+include("verificacao-admin.php");
 ?>
 
 <html>
@@ -18,7 +15,7 @@ if($_SESSION["usuario"]!="admin"){
         <div id="cabecalho-login" align="right">
           <table id="texto">
             <tr>
-              <td  align="right"> <?php echo "Ola ".$_SESSION["nome"] ?> </td>
+              <td  align="right"> <?php echo "Ola ".$_SESSION["anome"] ?> </td>
             </tr>
             <tr>
               <td><a href="sair.php" id="no-link">Clique aqui </a> para sair</td>
@@ -31,6 +28,7 @@ if($_SESSION["usuario"]!="admin"){
         <ul id="menu-lista">
           <li><a href="admin-produtos.php">Produtos</a></li>
           <li><a href="admin-usuarios.php">Usu&aacute;rios</a></li>
+          <li><a href="admin-historia.php">Hist&oacute;ria</a></li>
         </ul>
       </div>    
   </body>
