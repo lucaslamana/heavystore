@@ -44,7 +44,7 @@ $tam = count($cesta);
       </table>
 
       <div  style="float: left; position:relative; margin-top: 15px; width: 95%; text-align:right;">
-        <a href="produtos.php"><img src="images/botao_continuar.png" width="159" height="45" border="0" /></a>
+        <a href="produtos.php?p=todos"><img src="images/botao_continuar.png" width="159" height="45" border="0" /></a>
         &nbsp;&nbsp;&nbsp;&nbsp;<img src="images/botao_finalizar.png" width="159" height="45" />
       </div>
     </div>
