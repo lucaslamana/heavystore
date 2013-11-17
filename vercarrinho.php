@@ -14,22 +14,22 @@ $tam = count($cesta);
     <?php include("conexao.php"); ?>    
     <?php include("menu.php"); ?>
     <div id="conteudo">
-      <table align="center" width="100%" border="0" cellspacing="3" cellpadding="3" style="background-color: white" id="texto">
+      <table align="center" width="99%" border="0" cellspacing="3" cellpadding="3" >
         <tr>
-          <td align="center" bgcolor="#333333" style=" color: #fff; font-weight: bold;">Produto</td>
-          <td align="center" bgcolor="#333333" style=" color: #fff; font-weight: bold;">Qtde</td>
-          <td align="center" bgcolor="#333333" style=" color: #fff; font-weight: bold;">Valor Unit&aacuterio</td>
-          <td align="center" bgcolor="#333333" style=" color: #fff; font-weight: bold;">Valor Total</td>
+          <td align="center" bgcolor="#000000" style=" color: red; font-weight: bold; font-size: 24px">Produto</td>
+          <td align="center" bgcolor="#000000" style=" color: red; font-weight: bold; font-size: 24px">Qtde</td>
+          <td align="center" bgcolor="#000000" style=" color: red; font-weight: bold; font-size: 24px">Valor Unit&aacuterio</td>
+          <td align="center" bgcolor="#000000" style=" color: red; font-weight: bold; font-size: 24px">Valor Total</td>
         </tr>
         <?php
         $total = 0;
         for ($i = 0; $i < $tam; $i++) {
           ?>
           <tr>
-            <td bgcolor="#EBEBEB"><?php echo $cesta[$i]["PRODUTO"]; ?></td>
-            <td align="center" bgcolor="#EBEBEB"><input type="text" style="width: 35px;" value="<?php echo $cesta[$i]["QTD"]; ?>" name="qtde<?php echo $cesta[$i]["CODIGO"]; ?>" /> &nbsp; &nbsp; <img src="images/atualizar.jpg" width="16"  /></td>
-            <td align="center" bgcolor="#EBEBEB">R$ <?php echo number_format($cesta[$i]["PRECO"], 2, ",", "."); ?></td>
-            <td align="center" bgcolor="#EBEBEB">R$ <?php
+            <td bgcolor="#333333"style="color: white">&nbsp;<a href="excluir-item-carrinho.php?"><img src="images/delete.png" width="12"/></a>&nbsp;&nbsp;<?php echo $cesta[$i]["PRODUTO"]; ?></td>
+            <td align="center" bgcolor="#333333"><input type="number" style="width: 35px;" value="<?php echo $cesta[$i]["QTD"]; ?>" name="qtde<?php echo $cesta[$i]["CODIGO"]; ?>" /> &nbsp; &nbsp; <a href="#"><img src="images/atualizar.png" width="16"  /></td>
+            <td align="center" bgcolor="#333333" style="color: white">R$ <?php echo number_format($cesta[$i]["PRECO"], 2, ",", "."); ?></td>
+            <td align="center" bgcolor="#333333" style="color: white">R$ <?php
               $subtotal = $cesta[$i]["QTD"] * $cesta[$i]["PRECO"];
               echo number_format($subtotal, 2, ",", ".");
               $total = $total + $subtotal;
@@ -37,10 +37,10 @@ $tam = count($cesta);
           </tr>
         <?php } ?>
         <tr>
-          <td colspan="3" align="right" valign="middle" bgcolor="#E8E8E8" style="font-size: 15px; font-weight: bold;">CEP: <input type="text" maxlength="5" width="7" name="pt1" style="width: 45px;" /> - <input type="text" maxlength="3" width="5" name="pt2" style="width: 35px;" /> <input type="submit" value="calcular" style="font-size:11px;" /> </td>
-          <td align="center" bgcolor="#EBEBEB" style="font-size: 15px; font-weight: bold;">&nbsp;</td>
+          <td colspan="3" align="right" valign="middle" bgcolor="#333333" style="font-size: 15px; font-weight: bold;color: white">CEP: <input type="text" maxlength="5" width="7" name="pt1" style="width: 45px;" /> - <input type="text" maxlength="3" width="5" name="pt2" style="width: 35px;" /> <input type="submit" value="calcular" style="font-size:11px;" /> </td>
+          <td align="center" bgcolor="#333333" style="font-size: 15px; font-weight: bold;">&nbsp;</td>
         </tr>
-        <tr><td colspan="3" align="right" valign="middle" bgcolor="#CCCCCC" style="font-size: 15px; font-weight: bold;">Total: </td><td align="center" bgcolor="#CCCCCC" style="font-size: 15px; font-weight: bold;">R$ <?php echo number_format($total, 2, ",", "."); ?></td></tr>
+        <tr><td colspan="3" align="right" valign="middle" bgcolor="#000000" style="font-size: 24px;font-weight: bold;color: red ">Total: </td><td align="center" bgcolor="#000000" style="font-size: 24px; font-weight: bold;color: red">R$ <?php echo number_format($total, 2, ",", "."); ?></td></tr>
       </table>
 
       <div  style="float: left; position:relative; margin-top: 15px; width: 95%; text-align:right;">
