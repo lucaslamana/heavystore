@@ -30,6 +30,12 @@ include("verificacao-admin.php");
           <li><a href="admin-usuarios.php">Usu&aacute;rios</a></li>
           <li><a href="admin-historia.php">Hist&oacute;ria</a></li>
         </ul>
-      </div>    
+      </div>  
+    <?php 
+    if(@$_GET["info"]==1){ ?>
+    <div id="erro">
+      <p id="texto-erro">Hist&oacute;ria atualizada!</p>
+    </div>
+    <?php } ?>
   </body>
 </html>

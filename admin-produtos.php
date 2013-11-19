@@ -56,8 +56,8 @@ include("verificacao-admin.php");
         <tr>
           <td><?php echo $usuario["nome"]; ?></td>
           <td><?php
-            $texto = $usuario["descricao"];
-            echo strlen($texto) > 50 ? (substr($texto, 0, 50)) . "..." : $texto;
+            $sql = $usuario["descricao"];
+            echo strlen($sql) > 50 ? (substr($sql, 0, 50)) . "..." : $sql;
             ?></td>
           <td align="center"><?php
             $valor = $usuario["valor"];

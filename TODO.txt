@@ -1,5 +1,4 @@
-TODO
-
+TODO List
 
 [X] LB Listagem de produtos na pagina de produtos
 [X] LB Página de detalhe dos produtos
@@ -10,12 +9,11 @@ TODO
 [X] LL Upload de fotos para os produtos
 [X] LL Gerenciamento de produtos na parte administrativa
 [X] LL Gerenciamento de usuários na parte administrativa
-
-
 []  LB Página Carrinho-Compra
 []     Página index
 [X] LL Página de cadastro de endereço
 [X] LL Página principal do usuário
 []  LB Adicionar imagens página historia
-[]     Filtragem de produtos
-[]     Radion Box tela update foto (selecionar foto principal)
+[X] LL Filtragem de produtos
+[X] LL Radio box na tela de incluir foto (selecionar foto principal)
+[]  LL Criar pagina de manipular o texto e as imagens da historia da pagina historia
