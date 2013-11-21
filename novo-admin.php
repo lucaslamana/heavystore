@@ -27,7 +27,7 @@ include("verificacao-admin.php");
     </div>
     <div id="menu-topo">
       <ul id="menu-lista">
-        <li><a href="admin-produtos.php">Produtos</a></li>
+        <li><a href="admin-produtos.php?f=t">Produtos</a></li>
         <li><a href="admin-usuarios.php"><b>Usu&aacute;rios</b></a></li>
         <li><a href="admin-historia.php">Hist&oacute;ria</a></li>
       </ul>

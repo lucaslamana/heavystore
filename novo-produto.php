@@ -22,6 +22,14 @@ include("verificacao-admin.php");
           </tr>
         </table>
       </div>
+
+      <div id="menu-topo">
+        <ul id="menu-lista">
+          <li><a href="admin-produtos.php?f=t">Produtos</a></li>
+          <li><a href="admin-usuarios.php"><b>Usu&aacute;rios</b></a></li>
+          <li><a href="admin-historia.php">Hist&oacute;ria</a></li>
+        </ul>
+      </div>
     </div>
 
     <div id="conteudo">

@@ -27,7 +27,7 @@ include("verificacao-admin.php");
     </div>
     <div id="menu-topo">
       <ul id="menu-lista">
-        <li><a href="admin-produtos.php">Produtos</a></li>
+        <li><a href="admin-produtos.php?f=t">Produtos</a></li>
         <li><a href="admin-usuarios.php"><b>Usu&aacute;rios</b></a></li>
         <li><a href="admin-historia.php">Hist&oacute;ria</a></li>
       </ul>
@@ -39,10 +39,8 @@ include("verificacao-admin.php");
     <?php } ?>
 
     <div id="conteudo">
+     <a href="novo-admin.php" id="no-link">Novo Administrador</a>
       <table width="100%" id="texto" border="1" bordercolor="white">
-        <tr>
-          <td colspan="6"><a href="novo-admin.php" id="no-link">Novo Administrador</a></td>
-        </tr>
         <tr>
           <th bgcolor="red" align="center">Nome</th>
           <th bgcolor="red" align="center">Usu&aacute;rio</th>

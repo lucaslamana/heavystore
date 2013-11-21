@@ -33,7 +33,7 @@ include("conexao.php");
     </div>
     <div id="menu-topo">
       <ul id="menu-lista">
-        <li><a href="admin-produtos.php">Produtos</a></li>
+        <li><a href="admin-produtos.php?f=t">Produtos</a></li>
         <li><a href="admin-usuarios.php">Usu&aacute;rios</a></li>
         <li><a href="admin-historia.php"><b>Hist&oacute;ria</b></a></li>
       </ul>

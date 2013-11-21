@@ -1,12 +1,12 @@
 <?php
 include("conexao.php");
 
-if(!ereg("(([0-9]{2}.)?([0-9]{4,5})[-]([0-9]{4}))", $_POST["fone"])){
+if(!ereg("([0-9]{2}.)?[0-9]{4,5}\-[0-9]{4}", $_POST["fone"])){
   header("location: home-usuario.php?pagina=edita-localizacao&invalido=1");
   exit;
 }
 
-if(!ereg("(([0-9]{2}[.])([0-9]{3}[-])([0-9]{3}))", $_POST["cep"])){
+if(!ereg("[0-9]{2}\.[0-9]{3}\-[0-9]{3}", $_POST["cep"])){
   header("location: home-usuario.php?pagina=edita-localizacao&invalido=2");
   exit;
 }

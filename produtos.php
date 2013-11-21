@@ -73,31 +73,31 @@ session_start();
           $sql = mysql_query($txt);
         }
 
-        while ($dados = mysql_fetch_array($sql)) {
+        while ($produto = mysql_fetch_array($sql)) {
           ?>
 
           <div id="conteudo-box">
             <table width="100%">
               <tr>
-                <td id="texto-titulo" style="color: #000;" align="center"><?php echo $dados["tipo"] ?></td>
+                <td id="texto-titulo" style="color: #000;" align="center"><?php echo $produto["tipo"] ?></td>
               </tr>
               <tr>
-                <td align="center"><a href="detalhe-produto.php?id=<?php echo $dados["id"]; ?>"><img src="images/produtos/<?php echo $dados["foto"]; ?>" width="150dx" height="150dx"></a></td>
+                <td align="center"><a href="detalhe-produto.php?id=<?php echo $produto["id"]; ?>"><img src="images/produtos/<?php echo $produto["foto"]; ?>" width="150dx" height="150dx"></a></td>
               </tr>
               <tr>
-                <td align="center"><a href="detalhe-produto.php?id=<?php echo $dados["id"]; ?>" id="no-link" style="color: #000;"><?php
-                    $descricao = $dados["nome"] . " - " . $dados["descricao"];
+                <td align="center"><a href="detalhe-produto.php?id=<?php echo $produto["id"]; ?>" id="no-link" style="color: #000;"><?php
+                    $descricao = $produto["nome"] . " - " . $produto["descricao"];
                     echo strlen($descricao) > 30 ? (substr($descricao, 0, 28)) . "..." : $descricao;
                     ?></a></td>
               </tr>
               <tr>
                 <td align="center"><?php
-                  $valor = $dados["valor"];
+                  $valor = $produto["valor"];
                   echo "R$ " . number_format($valor, 2, ',', '');
                   ?></td>
               </tr>
               <tr>
-                <td align="center"><a href="carrinho.php?id= <?php echo $dados["id"]; ?>"><img src="images/botao_comprar.png" width="80" height="35"/></a></td>
+                <td align="center"><a href="carrinho.php?id= <?php echo $produto["id"]; ?>"><img src="images/botao_comprar.png" width="80" height="35"/></a></td>
               </tr>
             </table>
           </div>
