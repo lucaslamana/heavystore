@@ -104,6 +104,18 @@
   float: right;
 }
 
+#conteudo-centro-foto{
+  width: 70%;
+  height: auto;
+  float: left;
+}
+
+#conteudo-centro-fotos-produtos{
+  width: 15%;
+  height: auto;
+  float: right;
+}
+
 #conteudo-esquerdo{
   width: 20%;
   height: auto;

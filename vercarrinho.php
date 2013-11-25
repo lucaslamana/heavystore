@@ -13,8 +13,15 @@ $tam = count($cesta);
   <body bgcolor="#000000">
     <?php include("conexao.php"); ?>    
     <?php include("menu.php"); ?>
+    <div id="erro">
+      <?php if(@$_GET["erro"]==1){ ?>
+      <p id="texto-erro" align="right">Voc&ecirc; precisa estar logado para finalizar uma compra</p>
+      <?php } else if(@$_GET["erro"]==2){?>
+      <p id="texto-erro" align="right">A cesta de compras est&aacute; vazia!</p>
+      <?php } ?>
+    </div>
     <div id="conteudo">
-      <table align="center" width="99%" border="0" cellspacing="3" cellpadding="3" >
+      <table align="center" width="99%" border="0" cellspacing="3" cellpadding="3" id="texto">
         <tr>
           <td align="center" bgcolor="#000000" style=" color: red; font-weight: bold; font-size: 24px">Produto</td>
           <td align="center" bgcolor="#000000" style=" color: red; font-weight: bold; font-size: 24px">Qtde</td>
@@ -45,7 +52,7 @@ $tam = count($cesta);
 
       <div  style="float: left; position:relative; margin-top: 15px; width: 95%; text-align:right;">
         <a href="produtos.php?p=todos"><img src="images/botao_continuar.png" width="159" height="45" border="0" /></a>
-        &nbsp;&nbsp;&nbsp;&nbsp;<img src="images/botao_finalizar.png" width="159" height="45" />
+        <a href="finalizar-compra.php"><img src="images/botao_finalizar.png" width="159" height="45" /></a>
       </div>
     </div>
   </body>
