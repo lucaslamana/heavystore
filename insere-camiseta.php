@@ -8,7 +8,7 @@ $query = "insert into produtos (nome, descricao, material, cor, tamanho, valor,
       'Camiseta')";
 mysql_query($query);
 
-header("location: admin-produtos.php");
+header("location: admin-produtos.php?f=t");
 exit;
 
 ?>

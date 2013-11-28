@@ -1,5 +1,4 @@
 <?php
-include("verificacao.php");
 include("conexao.php");
 
 $query = "select * from fotos where idf = '$_GET[id]'";

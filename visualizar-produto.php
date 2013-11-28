@@ -30,6 +30,7 @@ include("verificacao-admin.php");
     <ul id="menu-lista">
       <li><a href="admin-produtos.php">Produtos</a></li>
       <li><a href="admin-usuarios.php">Usu&aacute;rios</a></li>
+          <li><a href="admin-historia.php">Hist&oacute;ria</a></li>
     </ul>
   </div>
   <div id="conteudo">
@@ -156,7 +157,7 @@ include("verificacao-admin.php");
         <td><?php echo $produto["quantidade"]; ?></td>
       </tr>
       <tr>
-        <td>Faixas: </td>
+        <td valign="top">Faixas: </td>
         <td><?php $faixas = $produto["relacaomusicas"];
         echo nl2br($faixas); ?></td>
       </tr>

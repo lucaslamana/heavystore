@@ -1,6 +1,4 @@
 <?php
-
-include("verificacao.php");
 include("conexao.php");
 
 $query = "select * from produtos where id = '$_GET[id]'";
@@ -24,12 +22,12 @@ if($produto["tipo"]=="Bandeira"){
        relacaomusicas = '$_POST[faixas]' where id = '$_GET[id]'";
   mysql_query($query);
 }else if($produto["tipo"]=="DVD"){
-  $query = "update produtos set nome = '$_POST[nome]]', descricao = '$_POST[descricao]',
+  $query = "update produtos set nome = '$_POST[nome]', descricao = '$_POST[descricao]',
      valor = '$_POST[valor]', duracao = '$_POST[duracao]', quantidade = '$_POST[quantidade]',
        relacaomusicas = '$_POST[faixas]' where id = '$_GET[id]'";
   mysql_query($query);
 }
 
-header("location: admin-produtos.php");
+header("location: admin-produtos.php?f=t");
 exit;
 ?>

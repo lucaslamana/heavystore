@@ -22,7 +22,7 @@ include("verificacao-admin.php");
           </tr>
         </table>
       </div>
-
+    </div>
       <div id="menu-topo">
         <ul id="menu-lista">
           <li><a href="admin-produtos.php?f=t">Produtos</a></li>
@@ -30,7 +30,6 @@ include("verificacao-admin.php");
           <li><a href="admin-historia.php">Hist&oacute;ria</a></li>
         </ul>
       </div>
-    </div>
 
     <div id="conteudo">
       <form method="post" action="escolha.php">

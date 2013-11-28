@@ -7,6 +7,6 @@ $query = "insert into produtos (nome, descricao, material, cor, valor, quantidad
     '$_POST[cor]', '$_POST[valor]', '$_POST[quantidade]', 'Bandeira')";
 mysql_query($query);
 
-header("location: admin-produtos.php");
+header("location: admin-produtos.php?f=t");
 exit;
 ?>
